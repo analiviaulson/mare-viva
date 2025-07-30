@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Parcerias - Maré Viva. Conheça nossos parceiros na conservação dos oceanos e sustentabilidade marinha.">
+    <title>Parcerias - Maré Viva</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/download-removebg-preview 2.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <button class="header__menu-btn" id="menuBtn" aria-label="Abrir menu">
+            ☰
+        </button>
+        
+        <a href="index.html" class="header__logo">Maré Viva</a>
+        
+        <div class="header__search">
+            <input type="search" class="header__search-input" placeholder="Pesquisar..." aria-label="Pesquisar">
+        </div>
+        
+        <a href="login.html" class="header__user-btn" aria-label="Login">
+            👤
+        </a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+        <div class="nav-menu__header">
+            <h2 class="nav-menu__title">Menu</h2>
+        </div>
+        
+        <ul class="nav-menu__list">
+            <li class="nav-menu__item">
+                <a href="index.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🏠</span>
+                    Início
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="login.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">👤</span>
+                    Login
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="denuncias.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">⚠️</span>
+                    Denúncia
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="contribuir.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🤝</span>
+                    Contribua
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="parcerias.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🏢</span>
+                    Parcerias
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="noticias.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">📰</span>
+                    Notícias
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="loja.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🛒</span>
+                    Loja
+                </a>
+            </li>
+        </ul>
+        
+        <div class="nav-menu__footer">
+            <a href="sobre.html" class="nav-menu__footer-link">
+                <span class="nav-menu__icon">👥</span>
+                Sobre Nós
+            </a>
+        </div>
+    </nav>
+
+    <!-- Menu Overlay -->
+    <div class="nav-menu__overlay" id="navOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Navigation Tabs -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="nav-tabs">
+                    <a href="sobre.html" class="nav-tab">Sobre</a>
+                    <a href="denuncias.html" class="nav-tab">Denúncia</a>
+                    <a href="noticias.html" class="nav-tab">Notícias</a>
+                    <a href="#" class="nav-tab">Ajuda</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="section">
+            <div class="container">
+                <div class="partners-header">
+                    <h1 class="partners-title">Possíveis parceiros</h1>
+                </div>
+
+                <!-- Partners Grid -->
+                <div class="partners-grid">
+                    <!-- WWF Partner -->
+                    <div class="partner-card wwf-card">
+                        <div class="partner-card__header">
+                            <h2 class="partner-card__title">WWF (World Wildlife Fund)</h2>
+                        </div>
+                        <div class="partner-card__body">
+                            <p class="partner-card__description">
+                                A WWF tem diversos projetos de preservação marinha e pode fornecer materiais educativos, parcerias e apoio em campanhas.
+                            </p>
+                            <div class="partner-card__logo">
+                                🐼
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Greenpeace Partner -->
+                    <div class="partner-card greenpeace-card">
+                        <div class="partner-card__header">
+                            <h2 class="partner-card__title">Greenpeace</h2>
+                        </div>
+                        <div class="partner-card__body">
+                            <p class="partner-card__description">
+                                Uma das maiores organizações globais de proteção ambiental, com foco também em oceanos, poluição plástica e pesca sustentável.
+                            </p>
+                            <div class="partner-card__logo">
+                                🌱
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Oceana Partner -->
+                    <div class="partner-card oceana-card">
+                        <div class="partner-card__header">
+                            <h2 class="partner-card__title">Oceana</h2>
+                        </div>
+                        <div class="partner-card__body">
+                            <p class="partner-card__description">
+                                Focada especificamente na preservação dos oceanos, podendo ser uma parceira para campanhas e recursos educativos.
+                            </p>
+                            <div class="partner-card__logo">
+                                🌊
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partnership Benefits -->
+                <div class="partnership-benefits">
+                    <div class="benefits-content">
+                        <p class="benefits-text">
+                            A parceria não só fortalece a visibilidade do seu site e promove a conscientização, mas também cria um ecossistema colaborativo em torno da causa. A união de diferentes expertises, recursos e redes amplia significativamente as chances de sucesso e de transformação real no cenário global da conservação dos oceanos.
+                        </p>
+                    </div>
+                    <div class="benefits-image">
+                        <img src="images/Frame 48.png" alt="Natureza e conservação" class="benefits-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="WhatsApp">📱</a>
+                <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+                <a href="#" class="footer__social-link" aria-label="Google">🌐</a>
+                <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+            </div>
+            <p>&copy; 2024 Maré Viva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+    <style>
+        .nav-tabs {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+            overflow-x: auto;
+        }
+        
+        .nav-tab {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background-color: var(--white);
+            border: 2px solid var(--medium-gray);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: var(--font-weight-medium);
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+        }
+        
+        .nav-tab:hover,
+        .nav-tab.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .partners-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .partners-title {
+            background-color: var(--white);
+            padding: var(--spacing-lg) var(--spacing-2xl);
+            border-radius: var(--radius-2xl);
+            display: inline-block;
+            box-shadow: var(--shadow-md);
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+        }
+        
+        .partners-grid {
+            display: grid;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-3xl);
+        }
+        
+        .partner-card {
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: transform var(--transition-fast);
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .wwf-card {
+            background: linear-gradient(135deg, #7DD3C0 0%, #5BB5A3 100%);
+        }
+        
+        .greenpeace-card {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+        }
+        
+        .oceana-card {
+            background: linear-gradient(135deg, #9C27B0 0%, #6A1B9A 100%);
+        }
+        
+        .partner-card__header {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .partner-card__title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            margin: 0;
+        }
+        
+        .partner-card__body {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+        
+        .partner-card__description {
+            flex: 1;
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .partner-card__logo {
+            font-size: 3rem;
+            opacity: 0.8;
+        }
+        
+        .partnership-benefits {
+            display: grid;
+            gap: var(--spacing-xl);
+            align-items: center;
+            background-color: var(--light-gray);
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-xl);
+        }
+        
+        .benefits-text {
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        .benefits-image {
+            text-align: center;
+        }
+        
+        .benefits-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        @media (min-width: 768px) {
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .partnership-benefits {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .partners-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .partner-card__body {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .partner-card__logo {
+                order: -1;
+                margin-bottom: var(--spacing-md);
+            }
+        }
+    </style>
+</body>
+</html>
+

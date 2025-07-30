@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja - Maré Viva. Produtos sustentáveis para apoiar a conservação dos oceanos.">
+    <title>Loja - Maré Viva</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/download-removebg-preview 2.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <button class="header__menu-btn" id="menuBtn" aria-label="Abrir menu">
+            ☰
+        </button>
+        
+        <a href="index.html" class="header__logo">Maré Viva</a>
+        
+        <div class="header__search">
+            <input type="search" class="header__search-input" placeholder="Pesquisar..." aria-label="Pesquisar">
+        </div>
+        
+        <a href="login.html" class="header__user-btn" aria-label="Login">
+            👤
+        </a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+        <div class="nav-menu__header">
+            <h2 class="nav-menu__title">Menu</h2>
+        </div>
+        
+        <ul class="nav-menu__list">
+            <li class="nav-menu__item">
+                <a href="index.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🏠</span>
+                    Início
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="login.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">👤</span>
+                    Login
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="denuncias.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">⚠️</span>
+                    Denúncia
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="contribuir.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🤝</span>
+                    Contribua
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="parcerias.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🏢</span>
+                    Parcerias
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="noticias.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">📰</span>
+                    Notícias
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="loja.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🛒</span>
+                    Loja
+                </a>
+            </li>
+        </ul>
+        
+        <div class="nav-menu__footer">
+            <a href="sobre.html" class="nav-menu__footer-link">
+                <span class="nav-menu__icon">👥</span>
+                Sobre Nós
+            </a>
+        </div>
+    </nav>
+
+    <!-- Menu Overlay -->
+    <div class="nav-menu__overlay" id="navOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Navigation Tabs -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="nav-tabs">
+                    <a href="sobre.html" class="nav-tab">Sobre</a>
+                    <a href="denuncias.html" class="nav-tab">Denúncia</a>
+                    <a href="noticias.html" class="nav-tab">Notícias</a>
+                    <a href="#" class="nav-tab">Ajuda</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Store Header -->
+        <section class="section">
+            <div class="container">
+                <div class="store-header">
+                    <h1 class="store-title">Bem Vindo a Loja</h1>
+                    <p class="store-subtitle">Quer anunciar? Clique aqui!</p>
+                </div>
+
+                <!-- Featured Products -->
+                <div class="featured-products">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Frame 40.png" alt="Canudo inox" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Canudo inox</h3>
+                            <p class="product-price">R$ 15,90</p>
+                            <button class="btn btn-primary product-btn">Comprar</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/Frame 4-5.png" alt="Pulseira 'onde está o mar?'" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Pulseira "onde está o mar?"</h3>
+                            <p class="product-price">R$ 25,00</p>
+                            <button class="btn btn-primary product-btn">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Catalog Section -->
+                <div class="catalog-section">
+                    <div class="catalog-header">
+                        <h2 class="catalog-title">Catálogo</h2>
+                        <div class="catalog-filter">
+                            <select class="filter-select" id="categoryFilter">
+                                <option value="">Todas as categorias</option>
+                                <option value="acessorios">Acessórios</option>
+                                <option value="utensílios">Utensílios</option>
+                                <option value="roupas">Roupas</option>
+                                <option value="decoracao">Decoração</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="search" class="search-input" placeholder="Buscar produtos..." id="productSearch">
+                        <button class="search-btn" aria-label="Buscar">🔍</button>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be loaded here -->
+                        <div class="product-card" data-category="utensílios">
+                            <div class="product-image">
+                                <div class="product-placeholder">🥤</div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Copo Reutilizável</h3>
+                                <p class="product-price">R$ 12,90</p>
+                                <button class="btn btn-primary product-btn">Comprar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="acessorios">
+                            <div class="product-image">
+                                <div class="product-placeholder">👜</div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Bolsa Ecológica</h3>
+                                <p class="product-price">R$ 35,00</p>
+                                <button class="btn btn-primary product-btn">Comprar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="roupas">
+                            <div class="product-image">
+                                <div class="product-placeholder">👕</div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Camiseta Maré Viva</h3>
+                                <p class="product-price">R$ 45,00</p>
+                                <button class="btn btn-primary product-btn">Comprar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="decoracao">
+                            <div class="product-image">
+                                <div class="product-placeholder">🖼️</div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Quadro Oceano</h3>
+                                <p class="product-price">R$ 89,90</p>
+                                <button class="btn btn-primary product-btn">Comprar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="utensílios">
+                            <div class="product-image">
+                                <div class="product-placeholder">🍽️</div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Kit Talheres Bambu</h3>
+                                <p class="product-price">R$ 28,50</p>
+                                <button class="btn btn-primary product-btn">Comprar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="acessorios">
+                            <div class="product-image">
+                                <div class="product-placeholder">⌚</div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Relógio Sustentável</h3>
+                                <p class="product-price">R$ 120,00</p>
+                                <button class="btn btn-primary product-btn">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="WhatsApp">📱</a>
+                <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+                <a href="#" class="footer__social-link" aria-label="Google">🌐</a>
+                <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+            </div>
+            <p>&copy; 2024 Maré Viva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Store functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeStore();
+        });
+
+        function initializeStore() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const productSearch = document.getElementById('productSearch');
+            const productsGrid = document.getElementById('productsGrid');
+
+            // Filter by category
+            if (categoryFilter) {
+                categoryFilter.addEventListener('change', function() {
+                    filterProducts(this.value, productSearch.value);
+                });
+            }
+
+            // Search products
+            if (productSearch) {
+                productSearch.addEventListener('input', function() {
+                    filterProducts(categoryFilter.value, this.value);
+                });
+            }
+
+            // Add to cart functionality
+            const productBtns = document.querySelectorAll('.product-btn');
+            productBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('.product-name').textContent;
+                    const productPrice = productCard.querySelector('.product-price').textContent;
+                    
+                    // Simulate add to cart
+                    this.textContent = 'Adicionado!';
+                    this.disabled = true;
+                    this.classList.add('btn-secondary');
+                    
+                    setTimeout(() => {
+                        this.textContent = 'Comprar';
+                        this.disabled = false;
+                        this.classList.remove('btn-secondary');
+                    }, 2000);
+                    
+                    alert(`${productName} (${productPrice}) foi adicionado ao carrinho!`);
+                });
+            });
+        }
+
+        function filterProducts(category, searchTerm) {
+            const products = document.querySelectorAll('.product-card');
+            
+            products.forEach(product => {
+                const productCategory = product.dataset.category || '';
+                const productName = product.querySelector('.product-name').textContent.toLowerCase();
+                
+                const matchesCategory = !category || productCategory === category;
+                const matchesSearch = !searchTerm || productName.includes(searchTerm.toLowerCase());
+                
+                if (matchesCategory && matchesSearch) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <style>
+        .nav-tabs {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+            overflow-x: auto;
+        }
+        
+        .nav-tab {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background-color: var(--white);
+            border: 2px solid var(--medium-gray);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: var(--font-weight-medium);
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+        }
+        
+        .nav-tab:hover,
+        .nav-tab.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .store-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .store-title {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .store-subtitle {
+            color: var(--primary-color);
+            font-size: var(--font-size-lg);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+        .featured-products {
+            display: grid;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-3xl);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        
+        .product-card {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: transform var(--transition-fast);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+            background: var(--ocean-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-placeholder {
+            font-size: 4rem;
+            color: var(--white);
+        }
+        
+        .product-info {
+            padding: var(--spacing-lg);
+        }
+        
+        .product-name {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .product-price {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .product-btn {
+            width: 100%;
+        }
+        
+        .catalog-section {
+            margin-top: var(--spacing-3xl);
+        }
+        
+        .catalog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+        
+        .catalog-title {
+            background-color: var(--white);
+            padding: var(--spacing-md) var(--spacing-xl);
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-md);
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--text-primary);
+            margin: 0;
+        }
+        
+        .filter-select {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 2px solid var(--medium-gray);
+            border-radius: var(--radius-lg);
+            background-color: var(--white);
+            font-size: var(--font-size-base);
+            cursor: pointer;
+        }
+        
+        .search-bar {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-xl);
+            max-width: 400px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: var(--spacing-md);
+            border: 2px solid var(--medium-gray);
+            border-radius: var(--radius-lg);
+            font-size: var(--font-size-base);
+        }
+        
+        .search-input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .search-btn {
+            padding: var(--spacing-md);
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+        }
+        
+        .search-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .products-grid {
+            display: grid;
+            gap: var(--spacing-xl);
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+        
+        @media (max-width: 767px) {
+            .catalog-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .catalog-title {
+                text-align: center;
+            }
+            
+            .featured-products {
+                grid-template-columns: 1fr;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</body>
+</html>
+

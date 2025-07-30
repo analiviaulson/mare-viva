@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maré Viva - Conservação e Sustentabilidade dos Oceanos. Informações sobre ODS 14, denúncias ambientais e ações de preservação marinha.">
+    <meta name="keywords" content="oceanos, sustentabilidade, ODS 14, conservação marinha, meio ambiente">
+    <title>Maré Viva - Conservação e Sustentabilidade dos Oceanos</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/download-removebg-preview 2.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <button class="header__menu-btn" id="menuBtn" aria-label="Abrir menu">
+            ☰
+        </button>
+        
+        <a href="index.html" class="header__logo">Maré Viva</a>
+        
+        <div class="header__search">
+            <input type="search" class="header__search-input" placeholder="Pesquisar..." aria-label="Pesquisar">
+        </div>
+        
+        <a href="login.html" class="header__user-btn" aria-label="Login">
+            👤
+        </a>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+        <div class="nav-menu__header">
+            <h2 class="nav-menu__title">Menu</h2>
+        </div>
+        
+        <ul class="nav-menu__list">
+            <li class="nav-menu__item">
+                <a href="index.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🏠</span>
+                    Início
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="login.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">👤</span>
+                    Login
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="denuncias.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">⚠️</span>
+                    Denúncia
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="contribuir.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🤝</span>
+                    Contribua
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="parcerias.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🏢</span>
+                    Parcerias
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="noticias.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">📰</span>
+                    Notícias
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="loja.html" class="nav-menu__link">
+                    <span class="nav-menu__icon">🛒</span>
+                    Loja
+                </a>
+            </li>
+        </ul>
+        
+        <div class="nav-menu__footer">
+            <a href="sobre.html" class="nav-menu__footer-link">
+                <span class="nav-menu__icon">👥</span>
+                Sobre Nós
+            </a>
+        </div>
+    </nav>
+
+    <!-- Menu Overlay -->
+    <div class="nav-menu__overlay" id="navOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="section-hero">
+            <div class="container">
+                <div class="section-hero__content">
+                    <img src="images/download-removebg-preview 2.png" alt="Logo Maré Viva" class="section-hero__logo" style="width: 120px; height: auto; margin: 0 auto var(--spacing-lg);">
+                    <h1 class="section-hero__title">Maré Viva</h1>
+                    <p class="section-hero__subtitle">
+                        Bem-vindo ao Maré Viva! Aqui você encontra informações detalhadas sobre ODS 14, vida marinha, poluição, conservação e recursos para proteger nossos oceanos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recycling Cards Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center mb-4">Reciclagem Consciente</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div class="card__body text-center">
+                            <div style="font-size: 4rem; margin-bottom: var(--spacing-md);">♻️</div>
+                            <h3 class="card__title text-primary">Vidros</h3>
+                            <p>Descarte vidros de forma responsável para proteger o meio ambiente marinho.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card__body text-center">
+                            <div style="font-size: 4rem; margin-bottom: var(--spacing-md);">🗂️</div>
+                            <h3 class="card__title text-primary">Papéis</h3>
+                            <p>Recicle papéis adequadamente para reduzir o impacto nos ecossistemas aquáticos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Waste Identification Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Identificando as cores de lixeiras seletivas</h2>
+                <div class="card">
+                    <div class="card__body">
+                        <div class="grid grid-2" style="gap: var(--spacing-sm); margin-bottom: var(--spacing-lg);">
+                            <div style="background-color: #4CAF50; color: white; padding: var(--spacing-sm); border-radius: var(--radius-md); text-align: center;">
+                                <strong>Verde</strong><br>Vidro
+                            </div>
+                            <div style="background-color: #2196F3; color: white; padding: var(--spacing-sm); border-radius: var(--radius-md); text-align: center;">
+                                <strong>Azul</strong><br>Papel
+                            </div>
+                            <div style="background-color: #FF9800; color: white; padding: var(--spacing-sm); border-radius: var(--radius-md); text-align: center;">
+                                <strong>Laranja</strong><br>Resíduos perigosos
+                            </div>
+                            <div style="background-color: #9C27B0; color: white; padding: var(--spacing-sm); border-radius: var(--radius-md); text-align: center;">
+                                <strong>Roxo</strong><br>Resíduos radioativos
+                            </div>
+                        </div>
+                        <p class="text-center">
+                            <strong>Marrom:</strong> Resíduos orgânicos<br>
+                            <strong>Preto:</strong> Madeira<br>
+                            <strong>Cinza:</strong> Resíduos gerais não recicláveis ou misturados<br>
+                            <strong>Branco:</strong> Resíduos ambulatoriais e de serviços de saúde<br>
+                            <strong>Amarelo:</strong> Metal<br>
+                            <strong>Vermelho:</strong> Plástico
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ocean Pollution Scale -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center mb-4">Escala de Poluição dos Oceanos</h2>
+                <div class="card">
+                    <div class="card__body">
+                        <img src="images/Frame 35.png" alt="Escala de Poluição dos Oceanos" class="card__image" style="height: auto;">
+                        <p class="mt-3">
+                            Compreenda os diferentes níveis de poluição marinha e como cada um afeta a vida nos oceanos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Illegal Fishing Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">PESCA ILEGAL:</h2>
+                <div class="card">
+                    <div class="card__body">
+                        <p>
+                            A pesca ilegal é extremamente danosa à vida marinha, pois retira espécies dos oceanos sem regulamentação adequada. Ela ocorre quando pescadores não respeitam as leis de proteção, prejudicando ecossistemas inteiros e ameaçando a biodiversidade. Além disso, essa prática compromete a sustentabilidade dos recursos marinhos, afetando comunidades que dependem da pesca para sobreviver. É fundamental denunciar e combater a pesca ilegal para preservar a vida marinha e garantir um futuro sustentável para os oceanos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Excessive Ocean Waste -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center mb-4">LIXO EXCESSIVO NO OCEANO:</h2>
+                <div class="card">
+                    <div class="card__body">
+                        <p>
+                            O lixo excessivo no oceano é uma das maiores ameaças à vida marinha, pois os animais podem ingerir ou se enroscar nesses resíduos, levando à morte. Além disso, o plástico se decompõe em microplásticos, que entram na cadeia alimentar e podem chegar até os humanos. Esse problema também afeta a qualidade da água, impacto a pesca e o turismo. É essencial reduzir, reutilizar e reciclar para proteger os oceanos e a biodiversidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ODS Info Section -->
+        <section class="section bg-primary text-white">
+            <div class="container text-center">
+                <h2 class="mb-4">O que é a ODS-14?</h2>
+                <p class="mb-4">
+                    A ODS 14 (Vida na Água) busca conservar e usar de forma sustentável os oceanos, mares e recursos marinhos para o desenvolvimento sustentável. Ela visa proteger ecossistemas marinhos, reduzir a poluição e promover a pesca sustentável.
+                </p>
+                <a href="metas.html" class="btn btn-secondary btn-large">Ver Metas</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section">
+            <div class="container text-center">
+                <h2 class="mb-4">Sobre nós</h2>
+                <p class="mb-4">
+                    Somos uma organização dedicada à conservação marinha e à educação ambiental. Nosso objetivo é conscientizar sobre a importância dos oceanos e promover ações sustentáveis para proteger a vida marinha.
+                </p>
+                <a href="sobre.html" class="btn btn-primary btn-large">Saiba Mais</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="WhatsApp">📱</a>
+                <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+                <a href="#" class="footer__social-link" aria-label="Google">🌐</a>
+                <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+            </div>
+            <p>&copy; 2024 Maré Viva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+
