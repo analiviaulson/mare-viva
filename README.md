@@ -1,2 +1,2 @@
-# mere-viva
+# maré-viva
 Projeto escolar Maré Viva
