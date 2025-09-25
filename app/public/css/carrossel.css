@@ -1,0 +1,30 @@
+.carousel__slide { display: none; }
+                .carousel__slide.active { display: block; }
+                .carousel__caption {
+                    background: rgba(0,0,0,0.5);
+                    color: #fff;
+                    padding: 1rem;
+                    border-radius: 0 0 var(--radius-md) var(--radius-md);
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    font-size: 1rem;
+                }
+                .carousel {
+                    overflow: hidden;
+                    border-radius: var(--radius-md);
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                    background: #fff;
+                }
+                .carousel__slides {
+                    position: relative;
+                }
+                .carousel__slide img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+                @media (max-width: 600px) {
+                    .carousel__caption { font-size: 0.9rem; padding: 0.5rem; }
+                }

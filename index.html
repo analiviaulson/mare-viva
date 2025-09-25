@@ -7,13 +7,14 @@
     <meta name="keywords" content="oceanos, sustentabilidade, ODS 14, conservação marinha, meio ambiente">
     <title>Maré Viva - Conservação e Sustentabilidade dos Oceanos</title>
     
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="app/public/css/reset.css">
+    <link rel="stylesheet" href="app/public/css/variables.css">
+    <link rel="stylesheet" href="app/public/css/base.css">
+    <link rel="stylesheet" href="app/public/css/components.css">
+    <link rel="stylesheet" href="app/public/css/responsive.css">
+    <link rel="stylesheet" href="app/public/css/carrossel.css">
     
-    <link rel="icon" type="image/png" href="images/download-removebg-preview 2.png">
+    <link rel="icon" type="image/png" href="app/public/images/download-removebg-preview 2.png">
 </head>
 <body>
     <header class="header">
@@ -96,13 +97,91 @@
         <section class="section-hero">
             <div class="container">
                 <div class="section-hero__content">
-                    <img src="images/download-removebg-preview 2.png" alt="Logo Maré Viva" class="section-hero__logo" style="width: 120px; height: auto; margin: 0 auto var(--spacing-lg);">
+                    <img src="app/public/images/download-removebg-preview 2.png" alt="Logo Maré Viva" class="section-hero__logo" style="width: 120px; height: auto; margin: 0 auto var(--spacing-lg);">
                     <h1 class="section-hero__title">Maré Viva</h1>
                     <p class="section-hero__subtitle">
                         Bem-vindo ao Maré Viva! Aqui você encontra informações detalhadas sobre ODS 14, vida marinha, poluição, conservação e recursos para proteger nossos oceanos.
                     </p>
                 </div>
             </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center mb-4">Notícias: O Impacto do Lixo no Oceano</h2>
+                <div class="carousel" id="newsCarousel" style="position: relative; max-width: 700px; margin: 0 auto;">
+                    <div class="carousel__slides">
+                            <div class="carousel__slide active">
+                                <img src="app/public/images/noticia1.jpg" alt="Tartaruga presa em plástico" style="width:100%; border-radius: var(--radius-md);">
+                            <div class="carousel__caption">
+                                <strong>Tartaruga Marinha Resgatada</strong>
+                                <p>Tartaruga é encontrada presa em sacola plástica no litoral brasileiro. Especialistas alertam para o aumento de resíduos nos oceanos.</p>
+                            </div>
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="app/public/images/noticia2.jpg" alt="Praia coberta de lixo" style="width:100%; border-radius: var(--radius-md);">
+                            <div class="carousel__caption">
+                                <strong>Praias Tomadas por Lixo</strong>
+                                <p>Mutirão retira toneladas de lixo das praias. Plásticos e garrafas são os principais resíduos encontrados.</p>
+                            </div>
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="app/public/images/noticia3.jpg" alt="Ave marinha com resíduos" style="width:100%; border-radius: var(--radius-md);">
+                            <div class="carousel__caption">
+                                <strong>Aves Marinhas em Perigo</strong>
+                                <p>Estudo mostra que 90% das aves marinhas já ingeriram plástico, afetando sua saúde e sobrevivência.</p>
+                            </div>
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="app/public/images/noticia4.jpg" alt="Golfinho nadando entre lixo" style="width:100%; border-radius: var(--radius-md);">
+                            <div class="carousel__caption">
+                                <strong>Golfinhos e a Poluição</strong>
+                                <p>Golfinhos são flagrados nadando entre resíduos flutuantes. Organizações pedem mais conscientização sobre o descarte correto do lixo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel__btn carousel__btn--prev" aria-label="Anterior" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.4); border: none; color: white; font-size: 2rem; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;">&#10094;</button>
+                    <button class="carousel__btn carousel__btn--next" aria-label="Próximo" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.4); border: none; color: white; font-size: 2rem; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;">&#10095;</button>
+                    <div class="carousel__dots" style="text-align: center; margin-top: 10px;">
+                        <span class="carousel__dot active" style="display: inline-block; width: 10px; height: 10px; margin: 0 4px; background: #2196F3; border-radius: 50%; cursor: pointer;"></span>
+                        <span class="carousel__dot" style="display: inline-block; width: 10px; height: 10px; margin: 0 4px; background: #bbb; border-radius: 50%; cursor: pointer;"></span>
+                        <span class="carousel__dot" style="display: inline-block; width: 10px; height: 10px; margin: 0 4px; background: #bbb; border-radius: 50%; cursor: pointer;"></span>
+                        <span class="carousel__dot" style="display: inline-block; width: 10px; height: 10px; margin: 0 4px; background: #bbb; border-radius: 50%; cursor: pointer;"></span>
+                    </div>
+                </div>
+            </div>
+            <script>
+                (function() {
+                    const slides = document.querySelectorAll('#newsCarousel .carousel__slide');
+                    const dots = document.querySelectorAll('#newsCarousel .carousel__dot');
+                    const prevBtn = document.querySelector('#newsCarousel .carousel__btn--prev');
+                    const nextBtn = document.querySelector('#newsCarousel .carousel__btn--next');
+                    let current = 0;
+                    function showSlide(idx) {
+                        slides.forEach((slide, i) => {
+                            slide.classList.toggle('active', i === idx);
+                            slide.style.display = i === idx ? 'block' : 'none';
+                        });
+                        dots.forEach((dot, i) => {
+                            dot.classList.toggle('active', i === idx);
+                            dot.style.background = i === idx ? '#2196F3' : '#bbb';
+                        });
+                        current = idx;
+                    }
+                    prevBtn.addEventListener('click', () => {
+                        showSlide((current - 1 + slides.length) % slides.length);
+                    });
+                    nextBtn.addEventListener('click', () => {
+                        showSlide((current + 1) % slides.length);
+                    });
+                    dots.forEach((dot, i) => {
+                        dot.addEventListener('click', () => showSlide(i));
+                    });
+                    // Initialize
+                    slides.forEach((slide, i) => {
+                        slide.style.display = i === 0 ? 'block' : 'none';
+                    });
+                })();
+            </script>
         </section>
 
         <section class="section">
@@ -165,7 +244,7 @@
                 <h2 class="text-center mb-4">Escala de Poluição dos Oceanos</h2>
                 <div class="card">
                     <div class="card__body">
-                        <img src="images/Frame 35.png" alt="Escala de Poluição dos Oceanos" class="card__image" style="height: auto;">
+                        <img src="app/public/images/Frame 35.png" alt="Escala de Poluição dos Oceanos" class="card__image" style="height: auto;">
                         <p class="mt-3">
                             Compreenda os diferentes níveis de poluição marinha e como cada um afeta a vida nos oceanos.
                         </p>
@@ -233,6 +312,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="app/public/js/main.js"></script>
 </body>
 </html>
