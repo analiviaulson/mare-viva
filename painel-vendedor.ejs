@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Painel do Vendedor - Maré Viva. Gerencie seus produtos e vendas.">
+    <title>Painel do Vendedor - Maré Viva</title>
+    
+    <link rel="stylesheet" href="app/public/css/reset.css">
+    <link rel="stylesheet" href="app/public/css/variables.css">
+    <link rel="stylesheet" href="app/public/css/base.css">
+    <link rel="stylesheet" href="app/public/css/components.css">
+    <link rel="stylesheet" href="app/public/css/responsive.css">
+    
+    <link rel="icon" type="image/png" href="app/public/images/download-removebg-preview 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oBW1S/5T3bBRl6QnXed0pM3OkI2+u7Qe9q6KzLr8b3o4wG0r8gH6T0qzU7S2s0WBDt6+uJz6U4m2gQ7l8j3R0Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        .vendedor-header {
+            background: var(--color-primary);
+            color: white;
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .vendedor-header__content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+        
+        .vendedor-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .stat-card {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+        
+        .stat-card__icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+        }
+        
+        .stat-card__info h3 {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .stat-card__info p {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: var(--color-text-primary);
+        }
+        
+        .produtos-section {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .produtos-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+        
+        .produtos-table {
+            width: 100%;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        
+        .produtos-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .produtos-table th,
+        .produtos-table td {
+            padding: var(--spacing-md);
+            text-align: left;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .produtos-table th {
+            background: var(--color-bg-secondary);
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+        
+        .produtos-table tbody tr:hover {
+            background: var(--color-bg-secondary);
+        }
+        
+        .produto-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+        
+        .btn-icon {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            font-size: 0.875rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .badge-success {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .badge-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <header class="vendedor-header">
+        <div class="vendedor-header__content">
+            <div>
+                <h1>Painel do Vendedor</h1>
+                <p id="vendedorEmail" style="opacity: 0.9; margin-top: var(--spacing-xs);"></p>
+            </div>
+            <div style="display: flex; gap: var(--spacing-md);">
+                <a href="loja" class="btn btn-secondary">Ver Loja</a>
+                <button id="logoutBtn" class="btn btn-secondary">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="vendedor-stats">
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <h3>Total de Produtos</h3>
+                        <p id="totalProdutos">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <h3>Vendas Este Mês</h3>
+                        <p id="vendasMes">0</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-card__info">
+                        <h3>Receita Total</h3>
+                        <p id="receitaTotal">R$ 0,00</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="produtos-section">
+                <div class="produtos-header">
+                    <h2>Meus Produtos</h2>
+                    <button id="addProdutoBtn" class="btn btn-primary">
+                        <i class="fa-solid fa-plus"></i> Adicionar Produto
+                    </button>
+                </div>
+
+                <div class="produtos-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Categoria</th>
+                                <th>Preço</th>
+                                <th>Estoque</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="produtosTableBody">
+                            <!-- Produtos serão inseridos aqui via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div style="text-align: center; margin-top: var(--spacing-xl);">
+                <a href="index" class="btn btn-secondary">Voltar ao Início</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const vendedorLogado = sessionStorage.getItem('vendedorLogado');
+            const vendedorEmail = sessionStorage.getItem('vendedorEmail');
+            
+            if (!vendedorLogado) {
+                alert('Você precisa fazer login como vendedor para acessar esta página.');
+                window.location.href = 'login-vendedor';
+                return;
+            }
+            
+            // Display vendor email
+            document.getElementById('vendedorEmail').textContent = vendedorEmail || 'vendedor@email.com';
+            
+            // Load mock data
+            loadMockData();
+            
+            // Setup event listeners
+            document.getElementById('logoutBtn').addEventListener('click', logout);
+            document.getElementById('addProdutoBtn').addEventListener('click', addProduto);
+        });
+        
+        function loadMockData() {
+            // Mock statistics
+            document.getElementById('totalProdutos').textContent = '12';
+            document.getElementById('vendasMes').textContent = '45';
+            document.getElementById('receitaTotal').textContent = 'R$ 3.450,00';
+            
+            // Mock products
+            const produtos = [
+                { nome: 'Garrafa Reutilizável Oceano', categoria: 'Acessórios', preco: 'R$ 45,00', estoque: 25, status: 'Ativo' },
+                { nome: 'Camiseta Sustentável Maré', categoria: 'Vestuário', preco: 'R$ 89,00', estoque: 15, status: 'Ativo' },
+                { nome: 'Sacola Ecológica Vida Marinha', categoria: 'Acessórios', preco: 'R$ 35,00', estoque: 50, status: 'Ativo' },
+                { nome: 'Canudo de Bambu Kit 4un', categoria: 'Utensílios', preco: 'R$ 25,00', estoque: 5, status: 'Baixo Estoque' },
+                { nome: 'Protetor Solar Reef Safe', categoria: 'Cuidados', preco: 'R$ 65,00', estoque: 30, status: 'Ativo' },
+            ];
+            
+            const tbody = document.getElementById('produtosTableBody');
+            tbody.innerHTML = '';
+            
+            produtos.forEach((produto, index) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><strong>${produto.nome}</strong></td>
+                    <td>${produto.categoria}</td>
+                    <td>${produto.preco}</td>
+                    <td>${produto.estoque}</td>
+                    <td>
+                        <span class="badge ${produto.status === 'Ativo' ? 'badge-success' : 'badge-warning'}">
+                            ${produto.status}
+                        </span>
+                    </td>
+                    <td class="produto-actions">
+                        <button class="btn btn-secondary btn-icon" onclick="editarProduto(${index})">
+                            <i class="fa-solid fa-edit"></i>
+                        </button>
+                        <button class="btn btn-secondary btn-icon" onclick="removerProduto(${index})">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+        
+        function logout() {
+            sessionStorage.removeItem('vendedorLogado');
+            sessionStorage.removeItem('vendedorEmail');
+            alert('Logout realizado com sucesso!');
+            window.location.href = 'index';
+        }
+        
+        function addProduto() {
+            alert('Funcionalidade de adicionar produto será implementada em breve!');
+        }
+        
+        function editarProduto(index) {
+            alert(`Editar produto ${index + 1} - Funcionalidade será implementada em breve!`);
+        }
+        
+        function removerProduto(index) {
+            if (confirm('Tem certeza que deseja remover este produto?')) {
+                alert(`Produto ${index + 1} removido!`);
+                loadMockData();
+            }
+        }
+    </script>
+</body>
+</html>
+
