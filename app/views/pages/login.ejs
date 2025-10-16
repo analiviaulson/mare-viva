@@ -15,17 +15,17 @@
     <link rel="icon" type="image/png" href="app/public/images/download-removebg-preview 2.png">
 </head>
 <body>
-    <div class="auth-container">
-        <div class="auth-card">
-            <div class="auth-card__header">
-                <div class="auth-card__icon">
+    <section class="auth-container">
+        <article class="auth-card">
+            <header class="auth-card__header">
+                <figure class="auth-card__icon">
                     👤
-                </div>
+                </figure>
                 <h1 class="auth-card__title">Faça seu Login</h1>
-            </div>
+            </header>
             
             <form class="auth-form" id="loginForm" novalidate>
-                <div class="form-group">
+                <section class="form-group">
                     <label for="email" class="form-label">E-mail</label>
                     <input 
                         type="email" 
@@ -36,10 +36,10 @@
                         required
                         autocomplete="email"
                     >
-                    <div class="form-error" id="emailError"></div>
-                </div>
+                    <section class="form-error" id="emailError"></section>
+                </section>
                 
-                <div class="form-group">
+                <section class="form-group">
                     <label for="password" class="form-label">Senha</label>
                     <input 
                         type="password" 
@@ -50,14 +50,14 @@
                         required
                         autocomplete="current-password"
                     >
-                    <div class="form-error" id="passwordError"></div>
-                </div>
+                    <section class="form-error" id="passwordError"></section>
+                </section>
                 
-                <div class="form-group">
+                <section class="form-group">
                     <button type="submit" class="btn btn-primary btn-full btn-large">
                         Login
                     </button>
-                </div>
+                </section>
                 
                 <nav class="auth-card__footer">
                     <p>
@@ -69,8 +69,8 @@
                     </p>
                 </nav>
             </form>
-        </div>
-    </div>
+        </article>
+    </section>
 
     <script src="app/public/js/forms.js"></script>
     <script>

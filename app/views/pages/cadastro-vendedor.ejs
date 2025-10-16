@@ -16,20 +16,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oBW1S/5T3bBRl6QnXed0pM3OkI2+u7Qe9q6KzLr8b3o4wG0r8gH6T0qzU7S2s0WBDt6+uJz6U4m2gQ7l8j3R0Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="auth-container">
-        <div class="auth-card">
-            <div class="auth-card__header">
-                <div class="auth-card__icon">
+    <section class="auth-container">
+        <article class="auth-card">
+            <header class="auth-card__header">
+                <figure class="auth-card__icon">
                     <i class="fa-solid fa-store" style="font-size: 3rem; color: var(--color-primary);"></i>
-                </div>
+                </figure>
                 <h1 class="auth-card__title">Cadastre-se como Vendedor</h1>
                 <p style="text-align: center; color: var(--color-text-secondary); margin-top: var(--spacing-sm);">
                     Venda produtos sustentáveis e contribua para a preservação dos oceanos
                 </p>
-            </div>
+            </header>
             
             <form class="auth-form" id="cadastroVendedorForm" novalidate>
-                <div class="form-group">
+                <section class="form-group">
                     <label for="nomeEmpresa" class="form-label">Nome da Empresa/Loja</label>
                     <input 
                         type="text" 
@@ -39,10 +39,10 @@
                         placeholder="Digite o nome da sua empresa"
                         required
                     >
-                    <div class="form-error" id="nomeEmpresaError"></div>
-                </div>
+                    <section class="form-error" id="nomeEmpresaError"></section>
+                </section>
 
-                <div class="form-group">
+                <section class="form-group">
                     <label for="cnpj" class="form-label">CNPJ (opcional)</label>
                     <input 
                         type="text" 
@@ -51,10 +51,10 @@
                         class="form-input" 
                         placeholder="00.000.000/0000-00"
                     >
-                    <div class="form-error" id="cnpjError"></div>
-                </div>
+                    <section class="form-error" id="cnpjError"></section>
+                </section>
                 
-                <div class="form-group">
+                <section class="form-group">
                     <label for="nomeResponsavel" class="form-label">Nome do Responsável</label>
                     <input 
                         type="text" 
@@ -64,10 +64,10 @@
                         placeholder="Digite seu nome completo"
                         required
                     >
-                    <div class="form-error" id="nomeResponsavelError"></div>
-                </div>
+                    <section class="form-error" id="nomeResponsavelError"></section>
+                </section>
                 
-                <div class="form-group">
+                <section class="form-group">
                     <label for="email" class="form-label">E-mail</label>
                     <input 
                         type="email" 
@@ -78,10 +78,10 @@
                         required
                         autocomplete="email"
                     >
-                    <div class="form-error" id="emailError"></div>
-                </div>
+                    <section class="form-error" id="emailError"></section>
+                </section>
 
-                <div class="form-group">
+                <section class="form-group">
                     <label for="telefone" class="form-label">Telefone</label>
                     <input 
                         type="tel" 
@@ -91,10 +91,10 @@
                         placeholder="(00) 00000-0000"
                         required
                     >
-                    <div class="form-error" id="telefoneError"></div>
-                </div>
+                    <section class="form-error" id="telefoneError"></section>
+                </section>
                 
-                <div class="form-group">
+                <section class="form-group">
                     <label for="password" class="form-label">Crie uma senha</label>
                     <input 
                         type="password" 
@@ -105,10 +105,10 @@
                         required
                         autocomplete="new-password"
                     >
-                    <div class="form-error" id="passwordError"></div>
-                </div>
+                    <section class="form-error" id="passwordError"></section>
+                </section>
                 
-                <div class="form-group">
+                <section class="form-group">
                     <label for="confirmPassword" class="form-label">Confirme sua senha</label>
                     <input 
                         type="password" 
@@ -119,10 +119,10 @@
                         required
                         autocomplete="new-password"
                     >
-                    <div class="form-error" id="confirmPasswordError"></div>
-                </div>
+                    <section class="form-error" id="confirmPasswordError"></section>
+                </section>
 
-                <div class="form-group">
+                <section class="form-group">
                     <label for="descricao" class="form-label">Descrição da Loja (opcional)</label>
                     <textarea 
                         id="descricao" 
@@ -131,13 +131,13 @@
                         rows="3"
                         placeholder="Conte um pouco sobre seus produtos e sua missão sustentável"
                     ></textarea>
-                </div>
+                </section>
                 
-                <div class="form-group">
+                <section class="form-group">
                     <button type="submit" class="btn btn-primary btn-full btn-large">
                         Criar Conta de Vendedor
                     </button>
-                </div>
+                </section>
                 
                 <nav class="auth-card__footer">
                     <p>
@@ -150,8 +150,8 @@
                     </p>
                 </nav>
             </form>
-        </div>
-    </div>
+        </article>
+    </section>
 
     <script src="/js/forms.js"></script>
     <script>
