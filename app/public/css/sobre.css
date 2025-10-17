@@ -1,0 +1,126 @@
+.about-card {
+    background: var(--ocean-gradient);
+    color: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-card__header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-card__title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+}
+
+.about-card__body p {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.objective-card {
+    background: linear-gradient(135deg, #2C5F5D 0%, #1A4A47 100%);
+}
+
+.values-section {
+    margin: var(--spacing-3xl) 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-lg);
+    justify-items: center;
+}
+
+.value-item {
+    text-align: center;
+    transition: transform var(--transition-fast);
+}
+
+.value-item:hover {
+    transform: translateY(-4px);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    box-shadow: var(--shadow-md);
+}
+
+.value-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.team-section {
+    margin-top: var(--spacing-3xl);
+}
+
+.team-title {
+    text-align: center;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.team-card {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.team-members {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .value-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .value-label {
+        font-size: var(--font-size-xs);
+    }
+    
+    .about-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .team-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

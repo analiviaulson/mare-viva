@@ -1,0 +1,225 @@
+
+        .goals-card {
+            background: var(--ocean-gradient);
+            color: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: var(--spacing-2xl);
+            margin-bottom: var(--spacing-3xl);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .goals-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .goals-title {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            margin: 0;
+        }
+        
+        .goals-intro {
+            margin-bottom: var(--spacing-xl);
+            text-align: center;
+        }
+        
+        .goals-intro p {
+            font-size: var(--font-size-lg);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .goals-list {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .goal-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-md);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            transition: background-color var(--transition-fast);
+        }
+        
+        .goal-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .goal-number {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-bold);
+            margin-right: var(--spacing-md);
+            min-width: 30px;
+            color: var(--white);
+        }
+        
+        .goal-text {
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            flex: 1;
+        }
+        
+        .goals-conclusion {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+        }
+        
+        .goals-conclusion p {
+            font-size: var(--font-size-lg);
+            margin: 0;
+        }
+        
+        .info-cards {
+            display: grid;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-3xl);
+        }
+        
+        .info-card {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .info-card__icon {
+            font-size: 3rem;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-full);
+            flex-shrink: 0;
+        }
+        
+        .conservation-card .info-card__icon {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+        }
+        
+        .education-card .info-card__icon {
+            background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
+        }
+        
+        .innovation-card .info-card__icon {
+            background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+        }
+        
+        .impact-card .info-card__icon {
+            background: linear-gradient(135deg, #9C27B0 0%, #6A1B9A 100%);
+        }
+        
+        .policy-card .info-card__icon {
+            background: linear-gradient(135deg, #607D8B 0%, #37474F 100%);
+        }
+        
+        .info-card__content {
+            flex: 1;
+        }
+        
+        .info-card__title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .info-card__text {
+            font-size: var(--font-size-base);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .cta-section {
+            text-align: center;
+        }
+        
+        .cta-card {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: var(--spacing-3xl);
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .cta-title {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .cta-description {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-xl);
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (min-width: 768px) {
+            .info-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .goals-card {
+                padding: var(--spacing-lg);
+            }
+            
+            .goals-title {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .info-card {
+                flex-direction: column;
+                text-align: center;
+                padding: var(--spacing-lg);
+            }
+            
+            .info-card__icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+            
+            .cta-card {
+                padding: var(--spacing-xl);
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
