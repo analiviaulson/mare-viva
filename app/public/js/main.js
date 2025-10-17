@@ -1,37 +1,37 @@
-// Main JavaScript file for Maré Viva website
+
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all components
+    
     initializeMenu();
     initializeScrollEffects();
     initializeImageLazyLoading();
     initializeAccessibility();
 });
 
-// Menu functionality
+
 function initializeMenu() {
     const menuBtn = document.getElementById('menuBtn');
     const navMenu = document.getElementById('navMenu');
     const navOverlay = document.getElementById('navOverlay');
     
     if (menuBtn && navMenu && navOverlay) {
-        // Open menu
+        
         menuBtn.addEventListener('click', function() {
             navMenu.classList.add('active');
             navOverlay.classList.add('active');
             document.body.style.overflow = 'hidden';
             
-            // Focus management for accessibility
+            
             const firstLink = navMenu.querySelector('.nav-menu__link');
             if (firstLink) {
                 firstLink.focus();
             }
         });
         
-        // Close menu when clicking overlay
+        
         navOverlay.addEventListener('click', closeMenu);
         
-        // Close menu with Escape key
+        
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && navMenu.classList.contains('active')) {
                 closeMenu();

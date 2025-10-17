@@ -6,13 +6,13 @@
     <meta name="description" content="Cadastro - Maré Viva. Crie sua conta e junte-se à nossa missão de conservação dos oceanos.">
     <title>Cadastro - Maré Viva</title>
     
-    <link rel="stylesheet" href="app/public/css/reset.css">
-    <link rel="stylesheet" href="app/public/css/variables.css">
-    <link rel="stylesheet" href="app/public/css/base.css">
-    <link rel="stylesheet" href="app/public/css/components.css">
-    <link rel="stylesheet" href="app/public/css/responsive.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     
-    <link rel="icon" type="image/png" href="app/public/images/download-removebg-preview 2.png">
+    <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
     
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -97,19 +97,19 @@
                 <nav class="auth-card__footer">
                     <p>
                         Já tem uma conta registrada? 
-                        <a href="login.ejs" class="auth-card__link">Login</a>
+                        <a href="/login" class="auth-card__link">Login</a>
                     </p>
                     <p>
-                        <a href="index.ejs" class="auth-card__link">Voltar ao início</a>
+                        <a href="/index" class="auth-card__link">Voltar ao início</a>
                     </p>
                 </nav>
             </form>
         </article>
     </section>
 
-    <script src="app/public/js/forms.js"></script>
+    <script src="/js/forms.js"></script>
     <script>
-        // Initialize register form
+    
         document.addEventListener('DOMContentLoaded', function() {
             const registerForm = document.getElementById('registerForm');
             
@@ -117,17 +117,17 @@
                 registerForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    // Clear previous errors
+                  
                     clearFormErrors();
                     
-                    // Get form data
+                   
                     const formData = new FormData(this);
                     const username = formData.get('username');
                     const email = formData.get('email');
                     const password = formData.get('password');
                     const confirmPassword = formData.get('confirmPassword');
                     
-                    // Validate form
+                    
                     let isValid = true;
                     
                     if (!username || username.length < 3) {
@@ -150,7 +150,6 @@
                         isValid = false;
                     }
                     
-                    // Check reCAPTCHA (simplified for demo)
                     const recaptchaResponse = grecaptcha.getResponse();
                     if (!recaptchaResponse) {
                         showFieldError('recaptchaError', 'Por favor, complete o reCAPTCHA.');
@@ -158,7 +157,7 @@
                     }
                     
                     if (isValid) {
-                        // Simulate registration process
+                        
                         const submitBtn = this.querySelector('button[type="submit"]');
                         const originalText = submitBtn.textContent;
                         

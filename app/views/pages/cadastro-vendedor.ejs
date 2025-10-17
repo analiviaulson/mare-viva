@@ -6,13 +6,13 @@
     <meta name="description" content="Cadastro Vendedor - Maré Viva. Cadastre-se como vendedor para vender produtos sustentáveis.">
     <title>Cadastro Vendedor - Maré Viva</title>
     
-    <link rel="stylesheet" href="app/public/css/reset.css">
-    <link rel="stylesheet" href="app/public/css/variables.css">
-    <link rel="stylesheet" href="app/public/css/base.css">
-    <link rel="stylesheet" href="app/public/css/components.css">
-    <link rel="stylesheet" href="app/public/css/responsive.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     
-    <link rel="icon" type="image/png" href="app/public/images/download-removebg-preview 2.png">
+    <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oBW1S/5T3bBRl6QnXed0pM3OkI2+u7Qe9q6KzLr8b3o4wG0r8gH6T0qzU7S2s0WBDt6+uJz6U4m2gQ7l8j3R0Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -162,10 +162,10 @@
                 cadastroForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    // Clear previous errors
+                    
                     clearFormErrors();
                     
-                    // Get form data
+                    
                     const formData = new FormData(this);
                     const nomeEmpresa = formData.get('nomeEmpresa');
                     const nomeResponsavel = formData.get('nomeResponsavel');
@@ -174,7 +174,7 @@
                     const password = formData.get('password');
                     const confirmPassword = formData.get('confirmPassword');
                     
-                    // Validate form
+                   
                     let isValid = true;
                     
                     if (!nomeEmpresa || nomeEmpresa.trim().length < 3) {
@@ -208,7 +208,7 @@
                     }
                     
                     if (isValid) {
-                        // Simulate registration process
+                       
                         const submitBtn = this.querySelector('button[type="submit"]');
                         const originalText = submitBtn.textContent;
                         
