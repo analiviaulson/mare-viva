@@ -18,7 +18,7 @@ router.get('/denuncias', (req, res) => {
   res.render('pages/denuncias');
 });
 
-router.get('/', (req, res) => {
+router.get('/index', (req, res) => {
   res.render('pages/index');
 });
 
