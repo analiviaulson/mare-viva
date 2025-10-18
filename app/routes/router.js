@@ -19,7 +19,7 @@ router.get('/denuncias', (req, res) => {
 });
 
 router.get('/index', (req, res) => {
-  res.render('pages/index');
+  res.redirect('/');
 });
 
 router.get('/login', (req, res) => {
