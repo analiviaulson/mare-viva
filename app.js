@@ -1,7 +1,9 @@
 const express = require ('express')
+const path = require('path');
 const app = express()
 const port = 3000
- 
+
+app.use('/fontawesome', express.static(path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free')));
 app.use(express.static('./app/public'));
  
 app.set('view engine' , 'ejs');
