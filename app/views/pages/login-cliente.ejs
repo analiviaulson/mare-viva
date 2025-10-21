@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Login - Maré Viva. Acesse sua conta para contribuir com a conservação dos oceanos.">
-    <title>Login - Maré Viva</title>
-    
-    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
-    
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/components.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    
-    <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
+<head>      
+<%- include('../partials/head', {
+        title:'Login Cliente - Maré Viva',
+        description:'Login Cliente - Maré Viva. Acesse sua conta para contribuir com a conservação dos oceanos.'
+    }) %>
+        <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
 </head>
 <body>
     <section class="auth-container">
@@ -23,7 +14,7 @@
                 <figure class="auth-card__icon">
                     👤
                 </figure>
-                <h1 class="auth-card__title">Faça seu Login</h1>
+                <h1 class="auth-card__title">Faça seu Login Cliente</h1>
             </header>
             
             <form class="auth-form" id="loginForm" novalidate>
@@ -54,17 +45,17 @@
                     >
                     <section class="form-error" id="passwordError"></section>
                 </section>
-                
+
                 <section class="form-group">
                     <button type="submit" class="btn btn-primary btn-full btn-large">
-                        Login
+                        Entrar
                     </button>
                 </section>
                 
                 <nav class="auth-card__footer">
                     <p>
                         Não tem uma conta? 
-                        <a href="/cadastro" class="auth-card__link">Sign Up</a>
+                        <a href="/cadastro-cliente" class="auth-card__link">Cadastro</a>
                     </p>
                     <p>
                         <a href="/index" class="auth-card__link">Voltar ao início</a>
@@ -75,6 +66,6 @@
     </section>
 
     <script src="/js/forms.js"></script>
-    <script src="/js/login.js"></script>
+    <script src="/js/login-cliente.js"></script>
 </body>
 </html>

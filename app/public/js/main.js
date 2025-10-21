@@ -38,11 +38,11 @@ function initializeMenu() {
             }
         });
         
-        // Close menu when clicking a link
+        
         const navLinks = navMenu.querySelectorAll('.nav-menu__link');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                // Small delay to allow navigation
+                
                 setTimeout(closeMenu, 100);
             });
         });
@@ -53,16 +53,16 @@ function initializeMenu() {
         navOverlay.classList.remove('active');
         document.body.style.overflow = '';
         
-        // Return focus to menu button
+        
         if (menuBtn) {
             menuBtn.focus();
         }
     }
 }
 
-// Smooth scroll effects
+
 function initializeScrollEffects() {
-    // Add smooth scrolling to all anchor links
+    
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     
     anchorLinks.forEach(link => {
@@ -90,7 +90,7 @@ function initializeScrollEffects() {
         });
     });
     
-    // Add scroll-based animations
+
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -104,14 +104,14 @@ function initializeScrollEffects() {
         });
     }, observerOptions);
     
-    // Observe cards and sections for animation
+   
     const animatedElements = document.querySelectorAll('.card, .section');
     animatedElements.forEach(element => {
         observer.observe(element);
     });
 }
 
-// Lazy loading for images
+
 function initializeImageLazyLoading() {
     const images = document.querySelectorAll('img[data-src]');
     
@@ -129,7 +129,7 @@ function initializeImageLazyLoading() {
         
         images.forEach(img => imageObserver.observe(img));
     } else {
-        // Fallback for older browsers
+    
         images.forEach(img => {
             img.src = img.dataset.src;
             img.classList.remove('lazy');
@@ -137,9 +137,9 @@ function initializeImageLazyLoading() {
     }
 }
 
-// Accessibility improvements
+
 function initializeAccessibility() {
-    // Add skip link functionality
+    
     const skipLink = document.querySelector('.skip-link');
     if (skipLink) {
         skipLink.addEventListener('click', function(e) {
@@ -152,7 +152,7 @@ function initializeAccessibility() {
         });
     }
     
-    // Improve focus management for cards
+    
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('keydown', function(e) {
@@ -166,7 +166,6 @@ function initializeAccessibility() {
         });
     });
     
-    // Add ARIA labels to interactive elements
     const buttons = document.querySelectorAll('button:not([aria-label])');
     buttons.forEach(button => {
         if (!button.getAttribute('aria-label')) {
@@ -178,7 +177,7 @@ function initializeAccessibility() {
     });
 }
 
-// Utility functions
+
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -204,7 +203,7 @@ function throttle(func, limit) {
     };
 }
 
-// Search functionality
+
 function initializeSearch() {
     const searchInput = document.querySelector('.header__search-input');
     
@@ -229,16 +228,15 @@ function initializeSearch() {
 }
 
 function performSearch(query) {
-    // This would typically make an API call
+    
     console.log('Searching for:', query);
     
-    // For demo purposes, show an alert
+
     if (query.trim()) {
         alert(`Buscando por: "${query}"`);
     }
 }
 
-// Form validation utilities
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
@@ -252,15 +250,14 @@ function validateMinLength(value, minLength) {
     return value && value.trim().length >= minLength;
 }
 
-// Error handling
+
 window.addEventListener('error', function(e) {
     console.error('JavaScript error:', e.error);
     
-    // In production, you might want to send this to an error tracking service
-    // trackError(e.error);
+    
 });
 
-// Performance monitoring
+
 if ('performance' in window) {
     window.addEventListener('load', function() {
         setTimeout(function() {
@@ -270,7 +267,6 @@ if ('performance' in window) {
     });
 }
 
-// Export functions for use in other scripts
 window.MareViva = {
     validateEmail,
     validateRequired,

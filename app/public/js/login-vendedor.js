@@ -30,9 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.textContent = 'Entrando...';
         submitBtn.disabled = true;
 
+        sessionStorage.setItem('vendedorLogado', true);
+        sessionStorage.setItem('vendedorEmail', email);
+
         setTimeout(() => {
-          alert('Login realizado com sucesso!');
-          window.location.href = 'index.ejs';
+          window.location.href = 'index';
         }, 1500);
       }
     });

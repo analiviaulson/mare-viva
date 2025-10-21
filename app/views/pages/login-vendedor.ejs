@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('../partials/head', {
+        title:'Login Vendedor - Maré Viva',
+        description:'Login Vendedor - Maré Viva. Acesse sua conta para contribuir com a conservação dos oceanos.'
+    }) %>
+        <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
+</head>
+<body>
+    <section class="auth-container">
+        <article class="auth-card">
+            <header class="auth-card__header">
+                <figure class="auth-card__icon">
+                    👤
+                </figure>
+                <h1 class="auth-card__title">Faça seu Login Vendedor</h1>
+            </header>
+            
+            <form class="auth-form" id="loginForm" novalidate>
+                <section class="form-group">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="exemplo@email.com"
+                        required
+                        autocomplete="email"
+                    >
+                    <section class="form-error" id="emailError"></section>
+                </section>
+                
+                <section class="form-group">
+                    <label for="password" class="form-label">Senha</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        class="form-input" 
+                        placeholder="Digite sua senha"
+                        required
+                        autocomplete="current-password"
+                    >
+                    <section class="form-error" id="passwordError"></section>
+                </section>
+                
+                <section class="form-group">
+                    <button type="submit" class="btn btn-primary btn-full btn-large">
+                        Entrar
+                    </button>
+                </section>
+                
+                <nav class="auth-card__footer">
+                    <p>
+                        Não tem uma conta de vendedor? 
+                        <a href="/cadastro-vendedor" class="auth-card__link">Cadastro</a>
+                    </p>
+                    <p>
+                        <a href="/index" class="auth-card__link">Voltar ao início</a>
+                    </p>
+                </nav>
+            </form>
+        </article>
+    </section>
+
+    <script src="/js/forms.js"></script>
+    <script src="/js/login-vendedor.js"></script>
+</body>
+</html>

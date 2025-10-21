@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Painel do Vendedor - Maré Viva. Gerencie seus produtos e vendas.">
-    <title>Painel do Vendedor - Maré Viva</title>
-    
-    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
-    
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/components.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    
+    <%- include('../partials/head', {
+        title:'Painel do Vendedor - Maré Viva',
+        description:'Painel do Vendedor - Maré Viva. Gerencie seus produtos e vendas.'
+    }) %>
     <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
-
     <link rel="stylesheet" href="/css/painel-vendedor.css">
 </head>
 <body>

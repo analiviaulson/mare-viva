@@ -1,6 +1,4 @@
-/* Components */
 
-/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -71,7 +69,7 @@
     transform: scale(1.05);
 }
 
-/* Navigation Menu */
+
 .nav-menu {
     position: fixed;
     top: 0;
@@ -162,7 +160,7 @@
     font-weight: var(--font-weight-medium);
 }
 
-/* Buttons */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -275,7 +273,7 @@
     object-fit: cover;
 }
 
-/* Forms */
+
 .form-group {
     margin-bottom: var(--spacing-lg);
 }
@@ -318,7 +316,7 @@
     margin-top: var(--spacing-xs);
 }
 
-/* Auth Forms */
+
 .auth-container {
     min-height: 100vh;
     background: var(--ocean-gradient);
@@ -386,7 +384,6 @@
     color: var(--white);
 }
 
-/* Grid */
 .grid {
     display: grid;
     gap: var(--spacing-lg);
@@ -404,13 +401,11 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
-/* Main Content */
 .main-content {
     margin-top: var(--header-height);
     min-height: calc(100vh - var(--header-height));
 }
 
-/* Section */
 .section {
     padding: var(--spacing-2xl) 0;
 }
@@ -434,7 +429,7 @@
     margin-bottom: var(--spacing-2xl);
 }
 
-/* Footer */
+
 .footer {
     background-color: var(--secondary-color);
     color: var(--white);

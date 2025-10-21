@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <%- include('../partials/head', {
+        title:'Seleção de Perfil - Maré Viva',
+        description:'Seleção de Perfil - Maré Viva. Escolha entre Cliente ou Vendedor para acessar sua conta.'
+    }) %>
+
+    <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
+</head>
+
+<body>
+    <section class="auth-container">
+        <article class="auth-card">
+            <header class="auth-card__header">
+                <figure class="auth-card__icon">
+                    👤
+                </figure>
+                <h1 class="auth-card__title">Selecione seu perfil</h1>
+            </header>
+            <main>
+                <section class="form-group">
+                    <a href="/login-cliente" class="btn btn-primary btn-full btn-large">
+                        Cliente
+                    </a>
+                </section>
+                <section class="form-group">
+                    <a href="/login-vendedor" class="btn btn-primary btn-full btn-large">
+                        Vendedor
+                    </a>
+                </section>
+            </main>
+        </article>
+    </section>
+</body>
+
+</html>

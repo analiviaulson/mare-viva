@@ -1,6 +1,6 @@
-/* CSS Variables */
+
 :root {
-    /* Colors */
+    
     --primary-color: #7DD3C0;
     --primary-dark: #5BB5A3;
     --secondary-color: #2C5F5D;
@@ -14,11 +14,11 @@
     --dark-gray: #4A4A4A;
     --black: #000000;
     
-    /* Background gradients */
+    
     --ocean-gradient: linear-gradient(135deg, #7DD3C0 0%, #4A9B8E 100%);
     --water-gradient: linear-gradient(180deg, #7DD3C0 0%, #5BB5A3 100%);
     
-    /* Typography */
+
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     --font-size-xs: 0.75rem;    /* 12px */
     --font-size-sm: 0.875rem;   /* 14px */
@@ -30,13 +30,13 @@
     --font-size-4xl: 2.25rem;   /* 36px */
     --font-size-5xl: 3rem;      /* 48px */
     
-    /* Font weights */
+  
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     
-    /* Spacing */
+  
     --spacing-xs: 0.25rem;   /* 4px */
     --spacing-sm: 0.5rem;    /* 8px */
     --spacing-md: 1rem;      /* 16px */
@@ -45,7 +45,7 @@
     --spacing-2xl: 3rem;     /* 48px */
     --spacing-3xl: 4rem;     /* 64px */
     
-    /* Border radius */
+ 
     --radius-sm: 0.25rem;    /* 4px */
     --radius-md: 0.5rem;     /* 8px */
     --radius-lg: 0.75rem;    /* 12px */
@@ -53,18 +53,17 @@
     --radius-2xl: 1.5rem;    /* 24px */
     --radius-full: 9999px;
     
-    /* Shadows */
+
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     
-    /* Transitions */
+
     --transition-fast: 0.15s ease-in-out;
     --transition-normal: 0.3s ease-in-out;
     --transition-slow: 0.5s ease-in-out;
-    
-    /* Z-index */
+
     --z-dropdown: 1000;
     --z-sticky: 1020;
     --z-fixed: 1030;
@@ -73,14 +72,14 @@
     --z-popover: 1060;
     --z-tooltip: 1070;
     
-    /* Container */
+
     --container-max-width: 1200px;
     --container-padding: var(--spacing-md);
     
-    /* Header */
+
     --header-height: 60px;
     
-    /* Breakpoints (for reference in JS) */
+
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;

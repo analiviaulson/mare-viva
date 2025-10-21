@@ -5,12 +5,20 @@ router.get('/', (req, res) => {
   res.render('pages/index');
 }); 
 
+router.get('/index', (req, res) => {
+  res.redirect('/');
+});
+
+router.get('/selecao-perfil', (req, res) => {
+  res.render('pages/selecao-perfil');
+});
+
 router.get('/cadastro-vendedor', (req, res) => {
   res.render('pages/cadastro-vendedor');
 });
 
-router.get('/cadastro', (req, res) => {
-  res.render('pages/cadastro');
+router.get('/cadastro-cliente', (req, res) => {
+  res.render('pages/cadastro-cliente');
 });
 
 router.get('/contribuir', (req, res) => {
@@ -21,12 +29,12 @@ router.get('/denuncias', (req, res) => {
   res.render('pages/denuncias');
 });
 
-router.get('/index', (req, res) => {
-  res.redirect('/');
+router.get('/login-cliente', (req, res) => {
+  res.render('pages/login-cliente');
 });
 
-router.get('/login', (req, res) => {
-  res.render('pages/login');
+router.get('/login-vendedor', (req, res) => {
+  res.render('pages/login-vendedor');
 });
 
 router.get('/loja', (req, res) => {

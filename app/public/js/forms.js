@@ -1,6 +1,4 @@
-// Forms JavaScript functionality for Maré Viva website
 
-// Form validation utilities
 class FormValidator {
     constructor(form) {
         this.form = form;
@@ -11,7 +9,6 @@ class FormValidator {
     init() {
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
         
-        // Real-time validation
         const inputs = this.form.querySelectorAll('input, textarea, select');
         inputs.forEach(input => {
             input.addEventListener('blur', () => this.validateField(input));
@@ -49,32 +46,32 @@ class FormValidator {
         let isValid = true;
         let errorMessage = '';
 
-        // Required field validation
+     
         if (field.hasAttribute('required') && !value) {
             errorMessage = 'Este campo é obrigatório.';
             isValid = false;
         }
-        // Email validation
+        
         else if (fieldType === 'email' && value && !this.isValidEmail(value)) {
             errorMessage = 'Por favor, insira um e-mail válido.';
             isValid = false;
         }
-        // Password validation
+        
         else if (fieldType === 'password' && value && value.length < 6) {
             errorMessage = 'A senha deve ter pelo menos 6 caracteres.';
             isValid = false;
         }
-        // Text length validation
+       
         else if (field.tagName === 'TEXTAREA' && value && value.length < 20) {
             errorMessage = 'Por favor, forneça mais detalhes (mínimo 20 caracteres).';
             isValid = false;
         }
-        // Name validation
+      
         else if (fieldName === 'name' && value && value.length < 2) {
             errorMessage = 'O nome deve ter pelo menos 2 caracteres.';
             isValid = false;
         }
-        // Username validation
+ 
         else if (fieldName === 'username' && value && value.length < 3) {
             errorMessage = 'O nome de usuário deve ter pelo menos 3 caracteres.';
             isValid = false;
@@ -140,11 +137,11 @@ class FormValidator {
         const submitBtn = this.form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         
-        // Show loading state
+      
         submitBtn.textContent = 'Enviando...';
         submitBtn.disabled = true;
         
-        // Simulate form submission
+        
         setTimeout(() => {
             this.handleFormSuccess();
             submitBtn.textContent = originalText;
@@ -153,26 +150,25 @@ class FormValidator {
     }
 
     handleFormSuccess() {
-        // Override this method in specific form implementations
+
         alert('Formulário enviado com sucesso!');
         this.form.reset();
     }
 }
 
-// Login form specific implementation
 class LoginForm extends FormValidator {
     handleFormSuccess() {
         alert('Login realizado com sucesso!');
-        window.location.href = 'index.html';
+        window.location.href = '/index';
     }
 }
 
-// Register form specific implementation
+
 class RegisterForm extends FormValidator {
     validateForm() {
         const isValid = super.validateForm();
         
-        // Additional validation for password confirmation
+     
         const password = this.form.querySelector('#password');
         const confirmPassword = this.form.querySelector('#confirmPassword');
         
@@ -183,7 +179,7 @@ class RegisterForm extends FormValidator {
             }
         }
 
-        // reCAPTCHA validation (simplified for demo)
+     
         if (typeof grecaptcha !== 'undefined') {
             const recaptchaResponse = grecaptcha.getResponse();
             if (!recaptchaResponse) {
@@ -201,11 +197,11 @@ class RegisterForm extends FormValidator {
 
     handleFormSuccess() {
         alert('Conta criada com sucesso!');
-        window.location.href = 'login.html';
+        window.location.href = 'login.ejs';
     }
 }
 
-// Report form specific implementation
+
 class ReportForm extends FormValidator {
     handleFormSuccess() {
         alert('Denúncia enviada com sucesso! Obrigado por contribuir com a preservação dos oceanos.');
@@ -213,7 +209,7 @@ class ReportForm extends FormValidator {
     }
 }
 
-// Contact form specific implementation
+
 class ContactForm extends FormValidator {
     handleFormSuccess() {
         alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
@@ -221,7 +217,7 @@ class ContactForm extends FormValidator {
     }
 }
 
-// Newsletter subscription form
+
 class NewsletterForm extends FormValidator {
     handleFormSuccess() {
         alert('Inscrição realizada com sucesso! Você receberá nossas atualizações por e-mail.');
@@ -229,7 +225,7 @@ class NewsletterForm extends FormValidator {
     }
 }
 
-// File upload handling
+
 class FileUploadHandler {
     constructor(input) {
         this.input = input;
@@ -265,12 +261,12 @@ class FileUploadHandler {
     }
 
     validateFile(file) {
-        // Check file size
+        
         if (file.size > this.maxSize) {
             return false;
         }
 
-        // Check file type
+        
         if (!this.allowedTypes.includes(file.type)) {
             return false;
         }
@@ -279,7 +275,6 @@ class FileUploadHandler {
     }
 
     displayFilePreview(files) {
-        // Create or update file preview container
         let previewContainer = this.input.parentNode.querySelector('.file-preview');
         
         if (!previewContainer) {
@@ -319,9 +314,8 @@ class FileUploadHandler {
     }
 }
 
-// Initialize forms when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize form validators
+   
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         new LoginForm(loginForm);
@@ -347,14 +341,14 @@ document.addEventListener('DOMContentLoaded', function() {
         new NewsletterForm(newsletterForm);
     }
 
-    // Initialize file upload handlers
+    
     const fileInputs = document.querySelectorAll('input[type="file"]');
     fileInputs.forEach(input => {
         new FileUploadHandler(input);
     });
 });
 
-// Export for use in other scripts
+
 window.FormValidator = FormValidator;
 window.FileUploadHandler = FileUploadHandler;
 

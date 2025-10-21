@@ -1,101 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contribuir - Maré Viva. Saiba como você pode contribuir para a conservação dos oceanos.">
-    <title>Contribuir - Maré Viva</title>
-
-    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
-    
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/components.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    
-    
+    <%- include('../partials/head', {
+        title:'Contribuir - Maré Viva',
+        description:'Contribuir - Maré Viva. Saiba como você pode contribuir para a conservação dos oceanos.'
+    }) %>
     <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
 </head>
 <body>
-   
-    <header class="header">
-        <button class="header__menu-btn" id="menuBtn" aria-label="Abrir menu">
-            ☰
-        </button>
-        
-        <a href="/index" class="header__logo">Maré Viva</a>
-        
-        <div class="header__search">
-            <input type="search" class="header__search-input" placeholder="Pesquisar..." aria-label="Pesquisar">
-        </div>
-        
-        <a href="/login" class="header__user-btn" aria-label="Login">
-            👤
-        </a>
-    </header>
-
-    <nav class="nav-menu" id="navMenu">
-        <div class="nav-menu__header">
-            <h2 class="nav-menu__title">Menu</h2>
-        </div>
-        
-        <ul class="nav-menu__list">
-            <li class="nav-menu__item">
-                <a href="/index" class="nav-menu__link">
-                    <span class="nav-menu__icon">🏠</span>
-                    Início
-                </a>
-            </li>
-            <li class="nav-menu__item">
-                <a href="/login" class="nav-menu__link">
-                    <span class="nav-menu__icon">👤</span>
-                    Login
-                </a>
-            </li>
-            <li class="nav-menu__item">
-                <a href="/denuncias" class="nav-menu__link">
-                    <span class="nav-menu__icon">⚠️</span>
-                    Denúncia
-                </a>
-            </li>
-            <li class="nav-menu__item">
-                <a href="/contribuir" class="nav-menu__link">
-                    <span class="nav-menu__icon">🤝</span>
-                    Contribua
-                </a>
-            </li>
-            <li class="nav-menu__item">
-                <a href="/parcerias" class="nav-menu__link">
-                    <span class="nav-menu__icon">🏢</span>
-                    Parcerias
-                </a>
-            </li>
-            <li class="nav-menu__item">
-                <a href="/noticias" class="nav-menu__link">
-                    <span class="nav-menu__icon">📰</span>
-                    Notícias
-                </a>
-            </li>
-            <li class="nav-menu__item">
-                <a href="/loja" class="nav-menu__link">
-                    <span class="nav-menu__icon">🛒</span>
-                    Loja
-                </a>
-            </li>
-        </ul>
-        
-        <div class="nav-menu__footer">
-            <a href="/sobre" class="nav-menu__footer-link">
-                <span class="nav-menu__icon">👥</span>
-                Sobre Nós
-            </a>
-        </div>
-    </nav>
-
-    
-    <div class="nav-menu__overlay" id="navOverlay"></div>
-
+    <%- include('../partials/header') %>
     
     <main class="main-content">
        
@@ -109,7 +22,6 @@
                 </div>
             </div>
         </section>
-
         
         <section class="section">
             <div class="container">
@@ -179,19 +91,8 @@
     </main>
 
  
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__social">
-                <a href="#" class="footer__social-link" aria-label="WhatsApp">📱</a>
-                <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
-                <a href="#" class="footer__social-link" aria-label="Google">🌐</a>
-                <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
-            </div>
-            <p>&copy; 2024 Maré Viva. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <%- include('../partials/footer') %>
 
-  
     <div class="modal" id="subscriptionModal">
         <div class="modal__overlay" id="modalOverlay"></div>
         <div class="modal__content">

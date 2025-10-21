@@ -33,7 +33,7 @@
     dot.addEventListener('click', () => showSlide(i));
   });
 
-  // Initialize
+  
   slides.forEach((slide, i) => {
     slide.style.display = i === 0 ? 'block' : 'none';
   });

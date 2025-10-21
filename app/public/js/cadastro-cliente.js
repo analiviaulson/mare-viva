@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         setTimeout(() => {
           alert('Conta criada com sucesso!');
-          window.location.href = 'login.ejs';
+          window.location.href = 'login-cliente.ejs';
         }, 1500);
       }
     });

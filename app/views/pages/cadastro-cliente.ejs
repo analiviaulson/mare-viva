@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cadastro - Maré Viva. Crie sua conta e junte-se à nossa missão de conservação dos oceanos.">
-    <title>Cadastro - Maré Viva</title>
-    
-    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
-    
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/components.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <%- include('../partials/head', {
+        title:'Cadastro - Maré Viva',
+        description:'Cadastro - Maré Viva. Crie sua conta e junte-se à nossa missão de conservação dos oceanos.'
+    }) %>
     
     <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
     
@@ -99,7 +91,7 @@
                 <nav class="auth-card__footer">
                     <p>
                         Já tem uma conta registrada? 
-                        <a href="/login" class="auth-card__link">Login</a>
+                        <a href="/login-cliente" class="auth-card__link">Login</a>
                     </p>
                     <p>
                         <a href="/index" class="auth-card__link">Voltar ao início</a>
@@ -110,6 +102,6 @@
     </section>
 
     <script src="/js/forms.js"></script>
-    <script src="/js/cadastro.js"></script>
+    <script src="/js/cadastro-cliente.js"></script>
 </body>
 </html>

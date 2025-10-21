@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cadastro Vendedor - Maré Viva. Cadastre-se como vendedor para vender produtos sustentáveis.">
-    <title>Cadastro Vendedor - Maré Viva</title>
-    
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/components.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <%- include('../partials/head', {
+        title:'Cadastro Vendedor - Maré Viva',
+        description:'Cadastro Vendedor - Maré Viva. Cadastre-se como vendedor para vender produtos sustentáveis.'
+    }) %>
     
     <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
-    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
 <body>
     <section class="auth-container">
         <article class="auth-card">
@@ -141,11 +137,10 @@
                 <nav class="auth-card__footer">
                     <p>
                         Já tem uma conta de vendedor? 
-                        <a href="login-vendedor" class="auth-card__link">Login</a>
+                        <a href="/login-vendedor" class="auth-card__link">Login</a>
                     </p>
                     <p>
-                        <a href="index.ejs
-                        " class="auth-card__link">Voltar ao início</a>
+                        <a href="/index" class="auth-card__link">Voltar ao início</a>
                     </p>
                 </nav>
             </form>
