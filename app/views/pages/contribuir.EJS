@@ -2,115 +2,115 @@
 <html lang="pt-BR">
 <head>
     <%- include('../partials/head', {
-        title:'Contribuir - Maré Viva',
-        description:'Contribuir - Maré Viva. Saiba como você pode contribuir para a conservação dos oceanos.'
+        title: 'Contribuir - Maré Viva',
+        description: 'Contribuir - Maré Viva. Saiba como você pode contribuir para a conservação dos oceanos.'
     }) %>
-    <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
 </head>
 <body>
+   
     <%- include('../partials/header') %>
-    
+
     <main class="main-content">
-       
+    
         <section class="section bg-light">
-            <div class="container">
-                <div class="nav-tabs">
-                    <a href="/sobre" class="nav-tab">Sobre</a>
-                    <a href="/denuncias" class="nav-tab">Denúncia</a>
-                    <a href="/noticias" class="nav-tab">Notícias</a>
-                    <a href="#" class="nav-tab">Ajuda</a>
-                </div>
-            </div>
+            <nav class="nav-tabs" aria-label="Navegação principal">
+                <a href="/sobre" class="nav-tab">Sobre</a>
+                <a href="/denuncias" class="nav-tab">Denúncia</a>
+                <a href="/noticias" class="nav-tab">Notícias</a>
+                <!--<a href="#" class="nav-tab">Ajuda</a> -->
+            </nav>
         </section>
-        
+
+  
         <section class="section">
-            <div class="container">
-                <h1 class="text-center mb-4">A importância da sua contribuição</h1>
-                
-                <div class="card mb-5">
-                    <div class="card__body">
+            <header class="text-center mb-4">
+                <h1>A importância da sua contribuição</h1>
+            </header>
+            
+            <article class="card mb-5">
+                <section class="card__body">
+                    <p>
+                        Cada pequena ação conta quando falamos sobre preservar nossos oceanos. A sua contribuição, seja participando de um mutirão de limpeza ou divulgando nossas ações, ajuda diretamente na luta contra a poluição marinha e na conservação da vida nos mares.
+                    </p>
+                </section>
+            </article>
+
+            <section class="contribution-sections">
+                <article class="contribution-card">
+                    <header class="contribution-card__header">
+                        <h2 class="contribution-card__title">Nosso site como ferramenta de transformação</h2>
+                    </header>
+                    <section class="contribution-card__body">
                         <p>
-                            Cada pequena ação conta quando falamos sobre preservar nossos oceanos. A sua contribuição, seja participando de um mutirão de limpeza ou divulgando nossas ações, ajuda diretamente na luta contra a poluição marinha e na conservação da vida nos mares.
+                            Nosso site foi criado como um espaço colaborativo para enfrentar os desafios da ODS 14 Vida na Água. Aqui, conectamos pessoas, compartilhamos informações, promovemos soluções online e mobilizamos ações concretas em prol dos oceanos. A sua participação fortalece essa rede e amplia nosso impacto.
                         </p>
-                    </div>
-                </div>
+                    </section>
+                </article>
 
-                
-                <div class="contribution-sections">
-                    
-                    <div class="contribution-card">
-                        <div class="contribution-card__header">
-                            <h2 class="contribution-card__title">Nosso site como ferramenta de transformação</h2>
-                        </div>
-                        <div class="contribution-card__body">
-                            <p>
-                                Nosso site foi criado como um espaço colaborativo para enfrentar os desafios da ODS 14 Vida na Água. Aqui, conectamos pessoas, compartilhamos informações, promovemos soluções online e mobilizamos ações concretas em prol dos oceanos. A sua participação fortalece essa rede e amplia nosso impacto.
-                            </p>
-                        </div>
-                    </div>
+                <article class="contribution-card">
+                    <header class="contribution-card__header">
+                        <h2 class="contribution-card__title">Juntos nos eventos e além deles</h2>
+                    </header>
+                    <section class="contribution-card__body">
+                        <p>
+                            Organizamos mutirões de limpeza em praias, rios e margens de lagos, unindo voluntários que acreditam em um futuro mais sustentável. Mas nossa atuação não para por aí — mantemos o engajamento online para que a proteção dos oceanos aconteça todos os dias, em qualquer lugar.
+                        </p>
+                    </section>
+                </article>
 
-                    
-                    <div class="contribution-card">
-                        <div class="contribution-card__header">
-                            <h2 class="contribution-card__title">Juntos nos eventos e além deles</h2>
-                        </div>
-                        <div class="contribution-card__body">
-                            <p>
-                                Organizamos mutirões de limpeza em praias, rios e margens de lagos, unindo voluntários que acreditam em um futuro mais sustentável. Mas nossa atuação não para por aí — mantemos o engajamento online para que a proteção dos oceanos aconteça todos os dias, em qualquer lugar.
-                            </p>
-                        </div>
-                    </div>
+                <article class="contribution-card">
+                    <header class="contribution-card__header">
+                        <h2 class="contribution-card__title">Transformando cliques em mudanças reais</h2>
+                    </header>
+                    <section class="contribution-card__body">
+                        <p>
+                            Ao interagir com nosso site, você está apoiando iniciativas que fazem diferença. Desde relatórios de poluição até denúncias de danos ambientais, cada ação digital se soma à causa maior: proteger a vida marinha e garantir mares limpos para as próximas gerações.
+                        </p>
+                    </section>
+                </article>
+            </section>
 
-                    
-                    <div class="contribution-card">
-                        <div class="contribution-card__header">
-                            <h2 class="contribution-card__title">Transformando cliques em mudanças reais</h2>
-                        </div>
-                        <div class="contribution-card__body">
-                            <p>
-                                Ao interagir com nosso site, você está apoiando iniciativas que fazem diferença. Desde relatórios de poluição até denúncias de danos ambientais, cada ação digital se soma à causa maior: proteger a vida marinha e garantir mares limpos para as próximas gerações.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="cta-section">
-                    <div class="cta-card">
+     
+            <section class="cta-section">
+                <article class="cta-card">
+                    <header>
                         <h2 class="cta-title">Pronto para fazer a diferença?</h2>
-                        <p class="cta-description">
-                            Junte-se à nossa comunidade e comece a contribuir hoje mesmo para a preservação dos oceanos.
-                        </p>
-                        <button class="btn btn-secondary btn-large cta-btn" id="subscribeBtn">
-                            Inscreva-se
-                        </button>
-                    </div>
-                </div>
-            </div>
+                    </header>
+                    <p class="cta-description">
+                        Junte-se à nossa comunidade e comece a contribuir hoje mesmo para a preservação dos oceanos.
+                    </p>
+                    <button class="btn btn-secondary btn-large cta-btn" id="subscribeBtn">
+                        Inscreva-se
+                    </button>
+                </article>
+            </section>
         </section>
     </main>
 
- 
+    
     <%- include('../partials/footer') %>
 
-    <div class="modal" id="subscriptionModal">
-        <div class="modal__overlay" id="modalOverlay"></div>
-        <div class="modal__content">
-            <div class="modal__header">
+ 
+    <dialog class="modal" id="subscriptionModal">
+        <section class="modal__overlay" id="modalOverlay"></section>
+        <article class="modal__content">
+            <header class="modal__header">
                 <h3 class="modal__title">Inscreva-se na Maré Viva</h3>
                 <button class="modal__close" id="modalClose" aria-label="Fechar">&times;</button>
-            </div>
-            <div class="modal__body">
+            </header>
+            <section class="modal__body">
                 <form class="subscription-form" id="subscriptionForm">
-                    <div class="form-group">
+                    <fieldset class="form-group">
                         <label for="subName" class="form-label">Nome completo</label>
                         <input type="text" id="subName" name="name" class="form-input" required>
-                    </div>
-                    <div class="form-group">
+                    </fieldset>
+
+                    <fieldset class="form-group">
                         <label for="subEmail" class="form-label">E-mail</label>
                         <input type="email" id="subEmail" name="email" class="form-input" required>
-                    </div>
-                    <div class="form-group">
+                    </fieldset>
+
+                    <fieldset class="form-group">
                         <label for="subInterests" class="form-label">Áreas de interesse</label>
                         <select id="subInterests" name="interests" class="form-input" required>
                             <option value="">Selecione uma opção</option>
@@ -120,20 +120,21 @@
                             <option value="pesquisa">Pesquisa e dados</option>
                             <option value="voluntariado">Voluntariado geral</option>
                         </select>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-full">Confirmar Inscrição</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                    </fieldset>
 
-  
+                    <footer class="form-group">
+                        <button type="submit" class="btn btn-primary btn-full">Confirmar Inscrição</button>
+                    </footer>
+                </form>
+            </section>
+        </article>
+    </dialog>
+->
     <script src="/js/main.js"></script>
     <script src="/js/contribuir.js"></script>
-
     <link rel="stylesheet" href="/css/contribuir.css">
 </body>
 </html>
+
+
 

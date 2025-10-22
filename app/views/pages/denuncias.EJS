@@ -5,96 +5,91 @@
         title:'Denúncias - Maré Viva',
         description:'Denúncias - Maré Viva. Reporte problemas ambientais e ajude na conservação dos oceanos.'
     }) %>
-    
-    <link rel="icon" type="image/png" href="app/public/images/download-removebg-preview 2.png">
 </head>
 <body>
-    
     <%- include('../partials/header') %>
 
     <main class="main-content">
         <section class="section bg-light">
-            <div class="container">
-                <nav class="nav-tabs">
-                    <a href="/sobre" class="nav-tab">Sobre</a>
-                    <a href="/denuncias" class="nav-tab active">Denúncia</a>
-                    <a href="/noticias" class="nav-tab">Notícias</a>
-                    <a href="#" class="nav-tab">Ajuda</a>
-                </nav>
-            </div>
+            <nav class="nav-tabs" aria-label="Navegação principal">
+                <a href="/sobre" class="nav-tab">Sobre</a>
+                <a href="/denuncias" class="nav-tab active">Denúncia</a>
+                <a href="/noticias" class="nav-tab">Notícias</a>
+                <!--<a href="#" class="nav-tab">Ajuda</a> -->
+            </nav>
         </section>
 
         <section class="section">
-            <div class="container">
-                <h1 class="text-center mb-4">Pra que serve minha Denúncia?</h1>
-                
-                <div class="card mb-5">
-                    <div class="card__body">
-                        <p>
-                            A denúncia é uma ferramenta essencial no combate à pesca ilegal e à preservação dos recursos marinhos. Ela permite que as autoridades ajam rapidamente para punir os infratores, garantindo que a pesca seja realizada de forma legal, ética e sustentável, promovendo a saúde dos oceanos e a proteção das espécies marinhas para as gerações futuras. Adicione também vídeos ou fotos para comprovar que você realmente viu o crime.
-                        </p>
-                    </div>
-                </div>
+            <header class="text-center mb-4">
+                <h1>Pra que serve minha Denúncia?</h1>
+            </header>
+            
+            <article class="card mb-5">
+                <section class="card__body">
+                    <p>
+                        A denúncia é uma ferramenta essencial no combate à pesca ilegal e à preservação dos recursos marinhos. Ela permite que as autoridades ajam rapidamente para punir os infratores, garantindo que a pesca seja realizada de forma legal, ética e sustentável, promovendo a saúde dos oceanos e a proteção das espécies marinhas para as gerações futuras. Adicione também vídeos ou fotos para comprovar que você realmente viu o crime.
+                    </p>
+                </section>
+            </article>
 
-                <form class="report-form" id="reportForm" novalidate>
-                    <div class="form-group">
-                        <label for="name" class="form-label">Nome</label>
-                        <input 
-                            type="text" 
-                            id="name" 
-                            name="name" 
-                            class="form-input" 
-                            placeholder="Digite seu nome..."
-                            required
-                        >
-                        <div class="form-error" id="nameError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            class="form-input" 
-                            placeholder="exemplo@gmail.com"
-                            required
-                        >
-                        <div class="form-error" id="emailError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="report" class="form-label">Digite sua Denúncia:</label>
-                        <textarea 
-                            id="report" 
-                            name="report" 
-                            class="form-input form-textarea" 
-                            placeholder="Descreva detalhadamente o que você presenciou..."
-                            required
-                        ></textarea>
-                        <div class="form-error" id="reportError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="attachment" class="form-label">Anexar foto ou vídeo</label>
-                        <input 
-                            type="file" 
-                            id="attachment" 
-                            name="attachment" 
-                            class="form-input" 
-                            accept="image/*,video/*"
-                            multiple
-                        >
-                        <small class="text-secondary">Formatos aceitos: JPG, PNG, MP4, MOV (máx. 10MB cada)</small>
-                    </div>
-                    
-                    <div class="form-group text-center">
-                        <button type="submit" class="btn btn-secondary btn-large">
-                            Enviar
-                        </button>
-                    </div>
-                </form>
-            </div>
+            <form class="report-form" id="reportForm" novalidate>
+                <fieldset class="form-group">
+                    <label for="name" class="form-label">Nome</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="form-input" 
+                        placeholder="Digite seu nome..."
+                        required
+                    >
+                    <output class="form-error" id="nameError"></output>
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="exemplo@gmail.com"
+                        required
+                    >
+                    <output class="form-error" id="emailError"></output>
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <label for="report" class="form-label">Digite sua Denúncia:</label>
+                    <textarea 
+                        id="report" 
+                        name="report" 
+                        class="form-input form-textarea" 
+                        placeholder="Descreva detalhadamente o que você presenciou..."
+                        required
+                    ></textarea>
+                    <output class="form-error" id="reportError"></output>
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <label for="attachment" class="form-label">Anexar foto ou vídeo</label>
+                    <input 
+                        type="file" 
+                        id="attachment" 
+                        name="attachment" 
+                        class="form-input" 
+                        accept="image/*,video/*"
+                        multiple
+                    >
+                    <small class="text-secondary">Formatos aceitos: JPG, PNG, MP4, MOV (máx. 10MB cada)</small>
+                </fieldset>
+                
+                <section class="form-group text-center">
+                    <button type="submit" class="btn btn-secondary btn-large">
+                        Enviar
+                    </button>
+                </section>
+            </form>
         </section>
     </main>
 
@@ -102,7 +97,6 @@
 
     <script src="/js/main.js"></script>
     <script src="/js/denuncias.js"></script>
-
     <link rel="stylesheet" href="/css/denuncias.css">
 </body>
 </html>

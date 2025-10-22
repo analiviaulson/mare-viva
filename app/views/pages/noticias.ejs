@@ -5,104 +5,93 @@
         title:'Notícias - Maré Viva',
         description:'Notícias - Maré Viva. Fique por dentro das últimas notícias sobre conservação marinha e sustentabilidade.'
     }) %>
-        <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
 </head>
 <body>
     <%- include('../partials/header') %>
 
     <main class="main-content">
         <section class="section bg-light">
-            <div class="container">
-                <nav class="nav-tabs">
-                    <a href="/sobre" class="nav-tab">Sobre</a>
-                    <a href="/denuncias" class="nav-tab">Denúncia</a>
-                    <a href="/noticias" class="nav-tab active">Notícias</a>
-                    <a href="#" class="nav-tab">Ajuda</a>
-                </nav>
-            </div>
+            <nav class="nav-tabs" aria-label="Navegação principal">
+                <a href="/sobre" class="nav-tab">Sobre</a>
+                <a href="/denuncias" class="nav-tab">Denúncia</a>
+                <a href="/noticias" class="nav-tab active">Notícias</a>
+                <!--<a href="#" class="nav-tab">Ajuda</a> -->
+            </nav>
         </section>
 
         <section class="section">
-            <div class="container">
-                <h1 class="text-center mb-4">Pra que serve a notícia?</h1>
-                
-                <div class="card mb-5">
-                    <div class="card__body">
-                        <p>
-                            A seção de notícias em um app sobre vida marinha tem como objetivo informar os usuários sobre temas relevantes, como poluição, conservação e biodiversidade, além de conscientizar sobre o impacto das atividades humanas nos oceanos. Ela também busca engajar as pessoas em ações práticas, como campanhas de limpeza e mudanças no consumo, e educar sobre a importância de preservar espécies e habitats marinhos, conectando os usuários às questões atuais e incentivando a proteção do consumo.
+            <header class="text-center mb-4">
+                <h1>Pra que serve a notícia?</h1>
+            </header>
+            
+            <article class="card mb-5">
+                <section class="card__body">
+                    <p>
+                        A seção de notícias em um app sobre vida marinha tem como objetivo informar os usuários sobre temas relevantes, como poluição, conservação e biodiversidade, além de conscientizar sobre o impacto das atividades humanas nos oceanos. Ela também busca engajar as pessoas em ações práticas, como campanhas de limpeza e mudanças no consumo, e educar sobre a importância de preservar espécies e habitats marinhos, conectando os usuários às questões atuais e incentivando a proteção do consumo.
+                    </p>
+                </section>
+            </article>
+
+            <section class="news-grid">
+                <article class="card news-article">
+                    <figure class="news-article__image">
+                        <img src="images/Frame 54.png" alt="Brasil e poluição plástica" class="card__image">
+                    </figure>
+                    <section class="news-article__content">
+                        <h2 class="news-article__title">Brasil lança cerca de 1,3 milhão de toneladas de plástico no oceano</h2>
+                        <p class="news-article__excerpt">
+                            O Brasil produz 1,3 milhão de toneladas de plástico no oceano anualmente, representando 8% da poluição plástica global.
                         </p>
-                    </div>
-                </div>
-
-                <div class="news-grid">
-                    <article class="card news-article">
-                        <div class="card__body">
-                            <div class="news-article__image">
-                                <img src="images/Frame 54.png" alt="Brasil e poluição plástica" class="card__image">
-                            </div>
-                            <div class="news-article__content">
-                                <h2 class="news-article__title">Brasil lança cerca de 1,3 milhão de toneladas de plástico no oceano</h2>
-                                <p class="news-article__excerpt">
-                                    O Brasil produz 1,3 milhão de toneladas de plástico no oceano anualmente, representando 8% da poluição plástica global.
-                                </p>
-                                <p class="news-article__text">
-                                    São 1,3 milhão de toneladas lançadas anualmente revela o relatório Fragmentos da Destruição: impacto do plástico à biodiversidade marinha brasileira lançado nesta quinta-feira (17) pela Organização não Governamental (ONG) Oceana. Esse volume representa 8% desse tipo de poluição em todo o planeta.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="card news-article">
-                        <div class="card__body">
-                            <div class="news-article__image">
-                                <img src="images/Frame 55.png" alt="Dados sobre resíduos sólidos" class="card__image">
-                            </div>
-                            <div class="news-article__content">
-                                <h2 class="news-article__title">Dados do Panorama dos Resíduos Sólidos no Brasil 2022</h2>
-                                <p class="news-article__excerpt">
-                                    Dados mostram que a geração de resíduos plásticos nas cidades brasileiras em 2022, ou cerca de 13,8 milhões de toneladas em 2022, ou cerca de 65 quilos por pessoa no ano.
-                                </p>
-                                <p class="news-article__text">
-                                    A crescente produção de resíduos plásticos no Brasil reflete um padrão preocupante. Apesar de sua alta presença no cotidiano, grande parte do plástico descartado acaba em aterros, rios e oceanos, agravando a poluição e prejudicando ecossistemas marinhos. Investir em educação ambiental, economia circular e políticas públicas eficazes é essencial para reverter esse problema.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="card news-article">
-                        <div class="card__body">
-                            <div class="news-article__content">
-                                <h2 class="news-article__title">Estudo da Universidade de Stanford sobre acesso à água</h2>
-                                <p class="news-article__text">
-                                    Um estudo da Universidade de Stanford, publicado em 2024, alerta que até 2050 metade da população mundial poderá enfrentar dificuldades para acessar água potável devido às mudanças climáticas, poluição e aumento da demanda. O oceano, com a diminuição de aquíferos e a degradação de rios e lagos.
-                                </p>
-                                <p class="news-article__text">
-                                    O relatório destaca a necessidade urgente de políticas públicas e inovações tecnológicas, como dessalinização e reaproveitamento de águas residuais, para garantir a gestão sustentável dos recursos hídricos. Especialistas pedem ações imediatas para reduzir o desperdício e garantir o acesso à água para todos.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="card news-article">
-                        <div class="card__body">
-                            <div class="news-article__content">
-                                <h2 class="news-article__title">Ações Imediatas - O Brasil Edge</h2>
-                                <p class="news-article__text">
-                                    O Brasil enfrenta uma grave crise hídrica, com níveis de água em reservatórios caindo drasticamente em estados como São Paulo, Minas Gerais e Rio de Janeiro. Além disso, a poluição de rios urbanos, como o Tietê e o Guaíba, compromete a qualidade da água disponível. Especialistas alertam para a necessidade de uma gestão eficiente dos recursos hídricos, incluindo a adoção de tecnologias para reuso de água e políticas públicas que priorizem a conservação. A crise também afeta a geração de energia hidrelétrica, colocando em risco o abastecimento energético do país e exigindo investimentos urgentes em fontes alternativas e sustentáveis.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="quote-section">
-                    <blockquote class="quote-card">
-                        <p class="quote-text">
-                            "A poluição plástica causa diversos problemas para centenas de espécies marinhas, aumentando os riscos à saúde humana."
+                        <p class="news-article__text">
+                            São 1,3 milhão de toneladas lançadas anualmente revela o relatório Fragmentos da Destruição: impacto do plástico à biodiversidade marinha brasileira lançado nesta quinta-feira (17) pela Organização não Governamental (ONG) Oceana. Esse volume representa 8% desse tipo de poluição em todo o planeta.
                         </p>
-                    </blockquote>
-                </div>
-            </div>
+                    </section>
+                </article>
+
+                <article class="card news-article">
+                    <figure class="news-article__image">
+                        <img src="images/Frame 55.png" alt="Dados sobre resíduos sólidos" class="card__image">
+                    </figure>
+                    <section class="news-article__content">
+                        <h2 class="news-article__title">Dados do Panorama dos Resíduos Sólidos no Brasil 2022</h2>
+                        <p class="news-article__excerpt">
+                            Dados mostram que a geração de resíduos plásticos nas cidades brasileiras em 2022, ou cerca de 13,8 milhões de toneladas em 2022, ou cerca de 65 quilos por pessoa no ano.
+                        </p>
+                        <p class="news-article__text">
+                            A crescente produção de resíduos plásticos no Brasil reflete um padrão preocupante. Apesar de sua alta presença no cotidiano, grande parte do plástico descartado acaba em aterros, rios e oceanos, agravando a poluição e prejudicando ecossistemas marinhos. Investir em educação ambiental, economia circular e políticas públicas eficazes é essencial para reverter esse problema.
+                        </p>
+                    </section>
+                </article>
+
+                <article class="card news-article">
+                    <section class="news-article__content">
+                        <h2 class="news-article__title">Estudo da Universidade de Stanford sobre acesso à água</h2>
+                        <p class="news-article__text">
+                            Um estudo da Universidade de Stanford, publicado em 2024, alerta que até 2050 metade da população mundial poderá enfrentar dificuldades para acessar água potável devido às mudanças climáticas, poluição e aumento da demanda. O oceano, com a diminuição de aquíferos e a degradação de rios e lagos.
+                        </p>
+                        <p class="news-article__text">
+                            O relatório destaca a necessidade urgente de políticas públicas e inovações tecnológicas, como dessalinização e reaproveitamento de águas residuais, para garantir a gestão sustentável dos recursos hídricos. Especialistas pedem ações imediatas para reduzir o desperdício e garantir o acesso à água para todos.
+                        </p>
+                    </section>
+                </article>
+
+                <article class="card news-article">
+                    <section class="news-article__content">
+                        <h2 class="news-article__title">Ações Imediatas - O Brasil Edge</h2>
+                        <p class="news-article__text">
+                            O Brasil enfrenta uma grave crise hídrica, com níveis de água em reservatórios caindo drasticamente em estados como São Paulo, Minas Gerais e Rio de Janeiro. Além disso, a poluição de rios urbanos, como o Tietê e o Guaíba, compromete a qualidade da água disponível. Especialistas alertam para a necessidade de uma gestão eficiente dos recursos hídricos, incluindo a adoção de tecnologias para reuso de água e políticas públicas que priorizem a conservação. A crise também afeta a geração de energia hidrelétrica, colocando em risco o abastecimento energético do país e exigindo investimentos urgentes em fontes alternativas e sustentáveis.
+                        </p>
+                    </section>
+                </article>
+            </section>
+
+            <section class="quote-section">
+                <blockquote class="quote-card">
+                    <p class="quote-text">
+                        "A poluição plástica causa diversos problemas para centenas de espécies marinhas, aumentando os riscos à saúde humana."
+                    </p>
+                </blockquote>
+            </section>
         </section>
     </main>
 

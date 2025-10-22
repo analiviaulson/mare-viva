@@ -5,56 +5,58 @@
         title:'Loja - Maré Viva',
         description:'Loja - Maré Viva. Produtos sustentáveis para apoiar a conservação dos oceanos.'
     }) %>
-    <link rel="icon" type="image/png" href="/images/download-removebg-preview 2.png">
 </head>
+
 <body>
     <%- include('../partials/header') %>
 
     <main class="main-content">
+        
         <section class="section bg-light">
-            <div class="container">
+            <header class="container">
                 <nav class="nav-tabs">
                     <a href="/sobre" class="nav-tab">Sobre</a>
                     <a href="/denuncias" class="nav-tab">Denúncia</a>
                     <a href="/noticias" class="nav-tab">Notícias</a>
-                    <a href="/ajuda" class="nav-tab">Ajuda</a>
+                    <!--<a href="/ajuda" class="nav-tab">Ajuda</a>  -->
                 </nav>
-            </div>
+            </header>
         </section>
 
         <section class="section">
-            <div class="container">
-                <div class="store-header">
-                    <h1 class="store-title">Bem Vindo a Loja</h1>
+            <article class="container">
+                
+                <header class="store-header">
+                    <h1 class="store-title">Bem-vindo à Loja</h1>
                     <p class="store-subtitle">Quer anunciar? Clique aqui!</p>
-                </div>
+                </header>
 
-                <div class="featured-products">
-                    <div class="product-card">
-                        <div class="product-image">
+                <section class="featured-products">
+                    <article class="product-card">
+                        <figure class="product-image">
                             <img src="images/Frame 40.png" alt="Canudo inox" class="product-img">
-                        </div>
-                        <div class="product-info">
+                        </figure>
+                        <section class="product-info">
                             <h3 class="product-name">Canudo inox</h3>
                             <p class="product-price">R$ 15,90</p>
                             <button class="btn btn-primary product-btn">Comprar</button>
-                        </div>
-                    </div>
+                        </section>
+                    </article>
 
-                    <div class="product-card">
-                        <div class="product-image">
+                    <article class="product-card">
+                        <figure class="product-image">
                             <img src="images/Frame 4-5.png" alt="Pulseira 'onde está o mar?'" class="product-img">
-                        </div>
-                        <div class="product-info">
+                        </figure>
+                        <section class="product-info">
                             <h3 class="product-name">Pulseira "onde está o mar?"</h3>
                             <p class="product-price">R$ 25,00</p>
                             <button class="btn btn-primary product-btn">Comprar</button>
-                        </div>
-                    </div>
-                </div>
+                        </section>
+                    </article>
+                </section>
 
-                <div class="catalog-section">
-                    <div class="catalog-header">
+                <section class="catalog-section">
+                    <header class="catalog-header">
                         <h2 class="catalog-title">Catálogo</h2>
                         <nav class="catalog-filter">
                             <select class="filter-select" id="categoryFilter">
@@ -65,82 +67,85 @@
                                 <option value="decoracao">Decoração</option>
                             </select>
                         </nav>
-                    </div>
+                    </header>
 
-                    <div class="search-bar">
+                    <form class="search-bar" role="search">
                         <input type="search" class="search-input" placeholder="Buscar produtos..." id="productSearch">
                         <button class="search-btn" aria-label="Buscar">🔍</button>
-                    </div>
+                    </form>
 
-                    <div class="products-grid" id="productsGrid">
-                        <div class="product-card" data-category="utensílios">
-                            <div class="product-image">
-                                <div class="product-placeholder">🥤</div>
-                            </div>
-                            <div class="product-info">
+                    <section class="products-grid" id="productsGrid">
+
+                        <article class="product-card" data-category="utensílios">
+                            <figure class="product-image">
+                                <span class="product-placeholder">🥤</span>
+                            </figure>
+                            <section class="product-info">
                                 <h3 class="product-name">Copo Reutilizável</h3>
                                 <p class="product-price">R$ 12,90</p>
                                 <button class="btn btn-primary product-btn">Comprar</button>
-                            </div>
-                        </div>
+                            </section>
+                        </article>
 
-                        <div class="product-card" data-category="acessorios">
-                            <div class="product-image">
-                                <div class="product-placeholder">👜</div>
-                            </div>
-                            <div class="product-info">
+                        <article class="product-card" data-category="acessorios">
+                            <figure class="product-image">
+                                <span class="product-placeholder">👜</span>
+                            </figure>
+                            <section class="product-info">
                                 <h3 class="product-name">Bolsa Ecológica</h3>
                                 <p class="product-price">R$ 35,00</p>
                                 <button class="btn btn-primary product-btn">Comprar</button>
-                            </div>
-                        </div>
+                            </section>
+                        </article>
 
-                        <div class="product-card" data-category="roupas">
-                            <div class="product-image">
-                                <div class="product-placeholder">👕</div>
-                            </div>
-                            <div class="product-info">
+                        <article class="product-card" data-category="roupas">
+                            <figure class="product-image">
+                                <span class="product-placeholder">👕</span>
+                            </figure>
+                            <section class="product-info">
                                 <h3 class="product-name">Camiseta Maré Viva</h3>
                                 <p class="product-price">R$ 45,00</p>
                                 <button class="btn btn-primary product-btn">Comprar</button>
-                            </div>
-                        </div>
+                            </section>
+                        </article>
 
-                        <div class="product-card" data-category="decoracao">
-                            <div class="product-image">
-                                <div class="product-placeholder">🖼️</div>
-                            </div>
-                            <div class="product-info">
+                        <article class="product-card" data-category="decoracao">
+                            <figure class="product-image">
+                                <span class="product-placeholder">🖼️</span>
+                            </figure>
+                            <section class="product-info">
                                 <h3 class="product-name">Quadro Oceano</h3>
                                 <p class="product-price">R$ 89,90</p>
                                 <button class="btn btn-primary product-btn">Comprar</button>
-                            </div>
-                        </div>
+                            </section>
+                        </article>
 
-                        <div class="product-card" data-category="utensílios">
-                            <div class="product-image">
-                                <div class="product-placeholder">🍽️</div>
-                            </div>
-                            <div class="product-info">
+                        <article class="product-card" data-category="utensílios">
+                            <figure class="product-image">
+                                <span class="product-placeholder">🍽️</span>
+                            </figure>
+                            <section class="product-info">
                                 <h3 class="product-name">Kit Talheres Bambu</h3>
                                 <p class="product-price">R$ 28,50</p>
                                 <button class="btn btn-primary product-btn">Comprar</button>
-                            </div>
-                        </div>
+                            </section>
+                        </article>
 
-                        <div class="product-card" data-category="acessorios">
-                            <div class="product-image">
-                                <div class="product-placeholder">⌚</div>
-                            </div>
-                            <div class="product-info">
+                        <article class="product-card" data-category="acessorios">
+                            <figure class="product-image">
+                                <span class="product-placeholder">⌚</span>
+                            </figure>
+                            <section class="product-info">
                                 <h3 class="product-name">Relógio Sustentável</h3>
                                 <p class="product-price">R$ 120,00</p>
                                 <button class="btn btn-primary product-btn">Comprar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            </section>
+                        </article>
+
+                    </section>
+                </section>
+
+            </article>
         </section>
     </main>
 
@@ -148,7 +153,6 @@
 
     <script src="/js/main.js"></script>
     <script src="/js/loja.js"></script>
-
     <link rel="stylesheet" href="/css/loja-page.css">
 </body>
 </html>
