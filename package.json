@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "start": "node app"
+    "start": "node app",
+    "lint": "eslint .",
+    "lint:ejs": "npx ejs-lint \"app/views/**/*.ejs\""
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
@@ -8,5 +10,14 @@
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "express-validator": "^7.2.1"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.13.0",
+    "@eslint/js": "^9.38.0",
+    "@eslint/json": "^0.13.2",
+    "@eslint/markdown": "^7.5.0",
+    "ejs-lint": "^2.0.1",
+    "eslint": "^9.38.0",
+    "globals": "^16.4.0"
   }
 }
