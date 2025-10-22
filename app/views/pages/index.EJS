@@ -102,6 +102,46 @@
             </section>
         </section>
 
+    <dialog class="modal" id="subscriptionModal">
+        <section class="modal__overlay" id="modalOverlay"></section>
+        <article class="modal__content">
+            <header class="modal__header">
+                <h3 class="modal__title">Inscreva-se na Maré Viva</h3>
+                <button class="modal__close" id="modalClose" aria-label="Fechar">&times;</button>
+            </header>
+            <section class="modal__body">
+                <form class="subscription-form" id="subscriptionForm">
+                    <fieldset class="form-group">
+                        <label for="subName" class="form-label">Nome completo</label>
+                        <input type="text" id="subName" name="name" class="form-input" required>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <label for="subEmail" class="form-label">E-mail</label>
+                        <input type="email" id="subEmail" name="email" class="form-input" required>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <label for="subInterests" class="form-label">Áreas de interesse</label>
+                        <select id="subInterests" name="interests" class="form-input" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="limpeza">Mutirões de limpeza</option>
+                            <option value="educacao">Educação ambiental</option>
+                            <option value="denuncias">Denúncias ambientais</option>
+                            <option value="pesquisa">Pesquisa e dados</option>
+                            <option value="voluntariado">Voluntariado geral</option>
+                        </select>
+                    </fieldset>
+
+                    <footer class="form-group">
+                        <button type="submit" class="btn btn-primary btn-full">Confirmar Inscrição</button>
+                    </footer>
+                </form>
+            </section>
+        </article>
+    </dialog>
+
+    
         <section class="section">
             <section class="container">
                 <h2 class="text-center mb-4">Reciclagem Consciente</h2>
