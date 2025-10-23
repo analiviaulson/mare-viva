@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <%- include('../partials/head', {
+    <%- include('../../partials/head', {
         title:'Cadastro Vendedor - Maré Viva',
         description:'Cadastro Vendedor - Maré Viva. Cadastre-se como vendedor para vender produtos sustentáveis.'
     }) %>
-    
-
     
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -137,7 +135,7 @@
                 <nav class="auth-card__footer">
                     <p>
                         Já tem uma conta de vendedor? 
-                        <a href="/login-vendedor" class="auth-card__link">Login</a>
+                        <a href="/vendedor/login" class="auth-card__link">Login</a>
                     </p>
                     <p>
                         <a href="/index" class="auth-card__link">Voltar ao início</a>
@@ -148,7 +146,7 @@
     </section>
 
     <script src="/js/forms.js"></script>
-    <script src="/js/cadastro-vendedor.js"></script>
+    <script src="/js/vendedor/cadastro-vendedor.js"></script>
 </body>
 </html>
 

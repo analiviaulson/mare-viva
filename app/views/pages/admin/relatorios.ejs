@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('../../partials/head', {
+        title:'Relatórios - Administrador',
+        description:'Visualize relatórios e estatísticas do sistema.'
+    }) %>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <section class="dashboard-header__content">
+            <header>
+                <h1>Relatórios e Estatísticas</h1>
+            </header>
+            <nav aria-label="Ações do administrador" style="display: flex; gap: var(--spacing-md);">
+                <a href="/admin/dashboard" class="btn btn-secondary">Voltar ao Dashboard</a>
+                <form method="POST" action="/admin/logout" style="display: inline;">
+                    <button type="submit" class="btn btn-secondary">Sair</button>
+                </form>
+            </nav>
+        </section>
+    </header>
+
+    <main class="main-content">
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="/admin/dashboard">Dashboard</a></li>
+                <li><a href="/admin/usuarios">Usuários</a></li>
+                <li><a href="/admin/produtos">Produtos</a></li>
+                <li><a href="/admin/pedidos">Pedidos</a></li>
+                <li><a href="/admin/relatorios" class="active">Relatórios</a></li>
+                <li><a href="/admin/configuracoes">Configurações</a></li>
+            </ul>
+        </nav>
+
+        <section class="relatorios-section">
+            <article class="relatorio-card" style="background: white; padding: var(--spacing-lg); border-radius: 8px; margin-bottom: var(--spacing-lg); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <header class="relatorio-header">
+                    <h2>Relatório de Vendas</h2>
+                    <div class="filter-options" style="display: flex; gap: var(--spacing-md); margin-top: var(--spacing-md);">
+                        <input 
+                            type="date" 
+                            id="dataInicio" 
+                            style="padding: var(--spacing-sm); border-radius: 4px; border: 1px solid #ddd;"
+                        >
+                        <input 
+                            type="date" 
+                            id="dataFim" 
+                            style="padding: var(--spacing-sm); border-radius: 4px; border: 1px solid #ddd;"
+                        >
+                        <button class="btn btn-secondary" onclick="gerarRelatorioVendas()">Gerar Relatório</button>
+                    </div>
+                </header>
+                <div id="relatorioVendas" style="margin-top: var(--spacing-md);">
+                    <p>Selecione um período e clique em "Gerar Relatório"</p>
+                </div>
+            </article>
+
+            <article class="relatorio-card" style="background: white; padding: var(--spacing-lg); border-radius: 8px; margin-bottom: var(--spacing-lg); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <header class="relatorio-header">
+                    <h2>Relatório de Usuários</h2>
+                </header>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-md);">
+                    <div style="padding: var(--spacing-md); background: #f5f5f5; border-radius: 4px;">
+                        <h3>Total de Clientes</h3>
+                        <p id="totalClientes" style="font-size: 2rem; font-weight: bold;">0</p>
+                    </div>
+                    <div style="padding: var(--spacing-md); background: #f5f5f5; border-radius: 4px;">
+                        <h3>Total de Vendedores</h3>
+                        <p id="totalVendedores" style="font-size: 2rem; font-weight: bold;">0</p>
+                    </div>
+                    <div style="padding: var(--spacing-md); background: #f5f5f5; border-radius: 4px;">
+                        <h3>Novos Usuários (Mês)</h3>
+                        <p id="novosUsuarios" style="font-size: 2rem; font-weight: bold;">0</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="relatorio-card" style="background: white; padding: var(--spacing-lg); border-radius: 8px; margin-bottom: var(--spacing-lg); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <header class="relatorio-header">
+                    <h2>Relatório de Produtos</h2>
+                </header>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-md);">
+                    <div style="padding: var(--spacing-md); background: #f5f5f5; border-radius: 4px;">
+                        <h3>Total de Produtos</h3>
+                        <p id="totalProdutos" style="font-size: 2rem; font-weight: bold;">0</p>
+                    </div>
+                    <div style="padding: var(--spacing-md); background: #f5f5f5; border-radius: 4px;">
+                        <h3>Produtos Ativos</h3>
+                        <p id="produtosAtivos" style="font-size: 2rem; font-weight: bold;">0</p>
+                    </div>
+                    <div style="padding: var(--spacing-md); background: #f5f5f5; border-radius: 4px;">
+                        <h3>Pendentes de Aprovação</h3>
+                        <p id="produtosPendentes" style="font-size: 2rem; font-weight: bold;">0</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="relatorio-card" style="background: white; padding: var(--spacing-lg); border-radius: 8px; margin-bottom: var(--spacing-lg); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <header class="relatorio-header">
+                    <h2>Relatório de Pedidos</h2>
+                </header>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-md);">
+                    <div style="padding: var(--spacing-md); background: #f5f5f5; border-radius: 4px;">
+                        <h3>Total de Pedidos</h3>
+                        <p id="totalPedidos" style="font-size: 2rem; font-weight: bold;">0</p>
+                    </div>
+                    <div style="padding: var(--spacing-md); background: #f5f5f5; border-radius: 4px;">
+                        <h3>Pedidos Entregues</h3>
+                        <p id="pedidosEntregues" style="font-size: 2rem; font-weight: bold;">0</p>
+                    </div>
+                    <div style="padding: var(--spacing-md); background: #f5f5f5; border-radius: 4px;">
+                        <h3>Ticket Médio</h3>
+                        <p id="ticketMedio" style="font-size: 2rem; font-weight: bold;">R$ 0,00</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="relatorio-card" style="background: white; padding: var(--spacing-lg); border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <header class="relatorio-header">
+                    <h2>Exportar Relatórios</h2>
+                </header>
+                <div style="display: flex; gap: var(--spacing-md); flex-wrap: wrap;">
+                    <button class="btn btn-secondary" onclick="exportarCSV()">
+                        <i class="fa-solid fa-download"></i> Exportar como CSV
+                    </button>
+                    <button class="btn btn-secondary" onclick="exportarPDF()">
+                        <i class="fa-solid fa-file-pdf"></i> Exportar como PDF
+                    </button>
+                    <button class="btn btn-secondary" onclick="exportarExcel()">
+                        <i class="fa-solid fa-file-excel"></i> Exportar como Excel
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <footer style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="/admin/dashboard" class="btn btn-secondary">Voltar ao Dashboard</a>
+        </footer>
+    </main>
+
+    <script src="/js/admin-relatorios.js"></script>
+</body>
+</html>
+

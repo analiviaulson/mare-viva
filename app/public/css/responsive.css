@@ -1,8 +1,4 @@
-/* Responsive Design */
 
-/* Mobile First - Base styles are for mobile */
-
-/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .container {
         padding: 0 var(--spacing-lg);
@@ -21,7 +17,7 @@
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
+
 @media (min-width: 768px) {
     :root {
         --header-height: 70px;
@@ -56,17 +52,15 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
-    /* Show search bar on tablets and up */
+
     .header__search {
         display: block;
     }
     
-    /* Adjust card layouts */
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    /* Form improvements */
+
     .form-row {
         display: flex;
         gap: var(--spacing-md);
@@ -77,7 +71,6 @@
     }
 }
 
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .container {
         padding: 0 var(--spacing-2xl);
@@ -99,8 +92,7 @@
     .card-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
-    /* Desktop navigation could be horizontal */
+
     .desktop-nav {
         display: flex;
         align-items: center;
@@ -118,18 +110,17 @@
         background-color: rgba(255, 255, 255, 0.1);
     }
     
-    /* Hide mobile menu button on desktop */
+
     .show-desktop-nav .header__menu-btn {
         display: none;
     }
-    
-    /* Show desktop navigation */
+
     .show-desktop-nav .desktop-nav {
         display: flex;
     }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
+
 @media (min-width: 1200px) {
     .section-hero__title {
         font-size: 5rem;
@@ -143,20 +134,19 @@
         grid-template-columns: repeat(4, 1fr);
     }
     
-    /* Larger containers */
+
     .container {
         max-width: 1400px;
     }
 }
 
-/* Mobile specific styles */
-@media (max-width: 767px) {
-    /* Hide search on mobile */
+@media (max-width: 575px) {
+
     .header__search {
         display: none;
     }
     
-    /* Stack cards vertically on mobile */
+
     .grid-2,
     .grid-3,
     .grid-4 {
@@ -167,7 +157,7 @@
         grid-template-columns: 1fr;
     }
     
-    /* Adjust typography for mobile */
+
     h1 {
         font-size: var(--font-size-3xl);
     }
@@ -184,12 +174,12 @@
         font-size: var(--font-size-lg);
     }
     
-    /* Mobile form adjustments */
+   
     .form-row {
         flex-direction: column;
     }
     
-    /* Mobile button adjustments */
+  
     .btn {
         width: 100%;
         justify-content: center;
@@ -201,7 +191,7 @@
         gap: var(--spacing-sm);
     }
     
-    /* Mobile spacing adjustments */
+
     .section {
         padding: var(--spacing-xl) 0;
     }
@@ -211,7 +201,6 @@
     }
 }
 
-/* Print styles */
 @media print {
     .header,
     .nav-menu,
@@ -236,7 +225,6 @@
     }
 }
 
-/* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -245,7 +233,7 @@
     }
 }
 
-/* High contrast mode */
+
 @media (prefers-contrast: high) {
     :root {
         --primary-color: #0066cc;
@@ -263,7 +251,7 @@
     }
 }
 
-/* Dark mode support */
+
 @media (prefers-color-scheme: dark) {
     :root {
         --white: #1a1a1a;

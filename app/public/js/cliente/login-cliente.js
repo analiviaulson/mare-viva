@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         setTimeout(() => {
           alert('Login realizado com sucesso!');
-          window.location.href = '/index';
+          window.location.href = '/loja';
         }, 1500);
       }
     });

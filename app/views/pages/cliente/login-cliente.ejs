@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>      
-<%- include('../partials/head', {
+<%- include('../../partials/head', {
         title:'Login Cliente - Maré Viva',
         description:'Login Cliente - Maré Viva. Acesse sua conta para contribuir com a conservação dos oceanos.'
     }) %>
@@ -55,7 +55,7 @@
                 <nav class="auth-card__footer">
                     <p>
                         Não tem uma conta? 
-                        <a href="/cadastro-cliente" class="auth-card__link">Cadastro</a>
+                        <a href="/cliente/cadastro" class="auth-card__link">Cadastro</a>
                     </p>
                     <p>
                         <a href="/index" class="auth-card__link">Voltar ao início</a>
@@ -66,6 +66,6 @@
     </section>
 
     <script src="/js/forms.js"></script>
-    <script src="/js/login-cliente.js"></script>
+    <script src="/js/cliente/login-cliente.js"></script>
 </body>
 </html>

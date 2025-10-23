@@ -1,24 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const registerForm = document.getElementById('registerForm');
+  const loginForm = document.getElementById('loginForm');
 
-  if (registerForm) {
-    registerForm.addEventListener('submit', function(e) {
+  if (loginForm) {
+    loginForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
       clearFormErrors();
 
       const formData = new FormData(this);
-      const username = formData.get('username');
       const email = formData.get('email');
       const password = formData.get('password');
-      const confirmPassword = formData.get('confirmPassword');
 
       let isValid = true;
-
-      if (!username || username.length < 3) {
-        showFieldError('usernameError', 'O nome de usuário deve ter pelo menos 3 caracteres.');
-        isValid = false;
-      }
 
       if (!email || !isValidEmail(email)) {
         showFieldError('emailError', 'Por favor, insira um e-mail válido.');
@@ -30,27 +23,18 @@ document.addEventListener('DOMContentLoaded', function() {
         isValid = false;
       }
 
-      if (password !== confirmPassword) {
-        showFieldError('confirmPasswordError', 'As senhas não coincidem.');
-        isValid = false;
-      }
-
-      const recaptchaResponse = grecaptcha.getResponse();
-      if (!recaptchaResponse) {
-        showFieldError('recaptchaError', 'Por favor, complete o reCAPTCHA.');
-        isValid = false;
-      }
-
       if (isValid) {
         const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
 
-        submitBtn.textContent = 'Criando conta...';
+        submitBtn.textContent = 'Entrando...';
         submitBtn.disabled = true;
 
+        sessionStorage.setItem('vendedorLogado', true);
+        sessionStorage.setItem('vendedorEmail', email);
+
         setTimeout(() => {
-          alert('Conta criada com sucesso!');
-          window.location.href = 'login-cliente.ejs';
+          window.location.href = '/vendedor/painel';
         }, 1500);
       }
     });
@@ -75,5 +59,6 @@ function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
+
 
 

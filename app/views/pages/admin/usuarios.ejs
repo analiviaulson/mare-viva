@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('../../partials/head', {
+        title:'Gerenciar Usuários - Administrador',
+        description:'Gerencie todos os usuários do sistema (clientes e vendedores).'
+    }) %>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <section class="dashboard-header__content">
+            <header>
+                <h1>Gerenciar Usuários</h1>
+            </header>
+            <nav aria-label="Ações do administrador" style="display: flex; gap: var(--spacing-md);">
+                <a href="/admin/dashboard" class="btn btn-secondary">Voltar ao Dashboard</a>
+                <form method="POST" action="/admin/logout" style="display: inline;">
+                    <button type="submit" class="btn btn-secondary">Sair</button>
+                </form>
+            </nav>
+        </section>
+    </header>
+
+    <main class="main-content">
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="/admin/dashboard">Dashboard</a></li>
+                <li><a href="/admin/usuarios" class="active">Usuários</a></li>
+                <li><a href="/admin/produtos">Produtos</a></li>
+                <li><a href="/admin/pedidos">Pedidos</a></li>
+                <li><a href="/admin/relatorios">Relatórios</a></li>
+                <li><a href="/admin/configuracoes">Configurações</a></li>
+            </ul>
+        </nav>
+
+        <section class="usuarios-section">
+            <header class="usuarios-header">
+                <h2>Lista de Usuários</h2>
+                <div class="header-actions" style="display: flex; gap: var(--spacing-md);">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Buscar por nome ou email..." 
+                        style="padding: var(--spacing-sm); border-radius: 4px; border: 1px solid #ddd; flex: 1;"
+                    >
+                    <select id="tipoFilter" style="padding: var(--spacing-sm); border-radius: 4px;">
+                        <option value="">Todos os Tipos</option>
+                        <option value="cliente">Cliente</option>
+                        <option value="vendedor">Vendedor</option>
+                    </select>
+                </div>
+            </header>
+
+            <section class="usuarios-table" aria-label="Tabela de usuários">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Tipo</th>
+                            <th>Data de Cadastro</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usuariosTableBody">
+                        <tr>
+                            <td colspan="7" style="text-align: center; padding: 2rem;">
+                                Nenhum usuário cadastrado ainda.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <footer style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="/admin/dashboard" class="btn btn-secondary">Voltar ao Dashboard</a>
+        </footer>
+    </main>
+
+    <!-- Modal para editar usuário -->
+    <div id="editModal" class="modal" style="display: none;">
+        <div class="modal-content" style="background: white; padding: var(--spacing-lg); border-radius: 8px; max-width: 500px; margin: auto;">
+            <header class="modal-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-md);">
+                <h2>Editar Usuário</h2>
+                <button class="close-btn" onclick="document.getElementById('editModal').style.display='none';" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+            </header>
+
+            <form id="editForm" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                <input type="hidden" id="usuarioId" name="usuarioId">
+
+                <div class="form-group">
+                    <label for="editNome">Nome</label>
+                    <input type="text" id="editNome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editEmail">Email</label>
+                    <input type="email" id="editEmail" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editTipo">Tipo</label>
+                    <select id="editTipo" name="role" required>
+                        <option value="cliente">Cliente</option>
+                        <option value="vendedor">Vendedor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="editStatus">Status</label>
+                    <select id="editStatus" name="status" required>
+                        <option value="ativo">Ativo</option>
+                        <option value="inativo">Inativo</option>
+                    </select>
+                </div>
+
+                <div style="display: flex; gap: var(--spacing-md);">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-secondary" onclick="document.getElementById('editModal').style.display='none';">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/admin-usuarios.js"></script>
+</body>
+</html>
+

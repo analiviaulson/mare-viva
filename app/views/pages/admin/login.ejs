@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('../../partials/head', {
+        title:'Login - Vendedor',
+        description:'Faça login como vendedor para acessar seu painel de controle.'
+    }) %>
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+    <main class="auth-container">
+        <section class="auth-box">
+            <header class="auth-header">
+                <h1>Login - Vendedor</h1>
+                <p>Acesse sua conta de vendedor</p>
+            </header>
+
+            <% if (typeof erro !== 'undefined' && erro) { %>
+                <div class="alert alert-danger" role="alert">
+                    <%= erro %>
+                </div>
+            <% } %>
+
+            <form method="POST" action="/vendedor/login" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="seu@email.com"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input 
+                        type="password" 
+                        id="senha" 
+                        name="senha" 
+                        required 
+                        placeholder="Sua senha"
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                    Entrar
+                </button>
+            </form>
+
+            <footer class="auth-footer">
+                <p>Não tem uma conta? <a href="/vendedor/cadastro">Cadastre-se aqui</a></p>
+                <p><a href="/">Voltar ao início</a></p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
+

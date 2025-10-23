@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('../../partials/head', {
+        title:'Meus Pedidos - Vendedor',
+        description:'Gerencie os pedidos recebidos.'
+    }) %>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <section class="dashboard-header__content">
+            <header>
+                <h1>Meus Pedidos</h1>
+            </header>
+            <nav aria-label="Ações do vendedor" style="display: flex; gap: var(--spacing-md);">
+                <a href="/vendedor/dashboard" class="btn btn-secondary">Voltar ao Dashboard</a>
+                <form method="POST" action="/vendedor/logout" style="display: inline;">
+                    <button type="submit" class="btn btn-secondary">Sair</button>
+                </form>
+            </nav>
+        </section>
+    </header>
+
+    <main class="main-content">
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="/vendedor/dashboard">Dashboard</a></li>
+                <li><a href="/vendedor/produtos">Meus Produtos</a></li>
+                <li><a href="/vendedor/pedidos" class="active">Meus Pedidos</a></li>
+                <li><a href="/vendedor/perfil">Meu Perfil</a></li>
+            </ul>
+        </nav>
+
+        <section class="pedidos-section">
+            <header class="pedidos-header">
+                <h2>Pedidos Recebidos</h2>
+                <div class="filter-options" style="display: flex; gap: var(--spacing-md);">
+                    <select id="statusFilter" style="padding: var(--spacing-sm); border-radius: 4px;">
+                        <option value="">Todos os Status</option>
+                        <option value="pendente">Pendente</option>
+                        <option value="processando">Processando</option>
+                        <option value="enviado">Enviado</option>
+                        <option value="entregue">Entregue</option>
+                        <option value="cancelado">Cancelado</option>
+                    </select>
+                </div>
+            </header>
+
+            <section class="pedidos-table" aria-label="Tabela de pedidos">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID do Pedido</th>
+                            <th>Cliente</th>
+                            <th>Data</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pedidosTableBody">
+                        <tr>
+                            <td colspan="6" style="text-align: center; padding: 2rem;">
+                                Nenhum pedido recebido ainda.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <footer style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="/vendedor/dashboard" class="btn btn-secondary">Voltar ao Dashboard</a>
+        </footer>
+    </main>
+
+    <script src="/js/vendedor-pedidos.js"></script>
+</body>
+</html>
+

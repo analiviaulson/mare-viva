@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('../../partials/head', {
+        title:'Configurações - Administrador',
+        description:'Configure os parâmetros gerais do sistema.'
+    }) %>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <section class="dashboard-header__content">
+            <header>
+                <h1>Configurações do Sistema</h1>
+            </header>
+            <nav aria-label="Ações do administrador" style="display: flex; gap: var(--spacing-md);">
+                <a href="/admin/dashboard" class="btn btn-secondary">Voltar ao Dashboard</a>
+                <form method="POST" action="/admin/logout" style="display: inline;">
+                    <button type="submit" class="btn btn-secondary">Sair</button>
+                </form>
+            </nav>
+        </section>
+    </header>
+
+    <main class="main-content">
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="/admin/dashboard">Dashboard</a></li>
+                <li><a href="/admin/usuarios">Usuários</a></li>
+                <li><a href="/admin/produtos">Produtos</a></li>
+                <li><a href="/admin/pedidos">Pedidos</a></li>
+                <li><a href="/admin/relatorios">Relatórios</a></li>
+                <li><a href="/admin/configuracoes" class="active">Configurações</a></li>
+            </ul>
+        </nav>
+
+        <section class="configuracoes-section" style="max-width: 800px;">
+            <article class="config-card" style="background: white; padding: var(--spacing-lg); border-radius: 8px; margin-bottom: var(--spacing-lg); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <header class="config-header">
+                    <h2>Informações Gerais</h2>
+                </header>
+                <form id="configGeral" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                    <div class="form-group">
+                        <label for="nomeApp">Nome da Aplicação</label>
+                        <input 
+                            type="text" 
+                            id="nomeApp" 
+                            name="nomeApp" 
+                            value="Maré Viva" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricaoApp">Descrição</label>
+                        <textarea 
+                            id="descricaoApp" 
+                            name="descricaoApp" 
+                            rows="4"
+                        >Plataforma de conservação e sustentabilidade dos oceanos</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailContato">Email de Contato</label>
+                        <input 
+                            type="email" 
+                            id="emailContato" 
+                            name="emailContato" 
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Salvar Configurações</button>
+                </form>
+            </article>
+
+            <article class="config-card" style="background: white; padding: var(--spacing-lg); border-radius: 8px; margin-bottom: var(--spacing-lg); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <header class="config-header">
+                    <h2>Configurações de Loja</h2>
+                </header>
+                <form id="configLoja" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                    <div class="form-group">
+                        <label for="taxaComissao">Taxa de Comissão (%)</label>
+                        <input 
+                            type="number" 
+                            id="taxaComissao" 
+                            name="taxaComissao" 
+                            min="0" 
+                            max="100" 
+                            step="0.01" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fretePadrao">Frete Padrão (R$)</label>
+                        <input 
+                            type="number" 
+                            id="fretePadrao" 
+                            name="fretePadrao" 
+                            min="0" 
+                            step="0.01" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tempoEntrega">Tempo de Entrega Padrão (dias)</label>
+                        <input 
+                            type="number" 
+                            id="tempoEntrega" 
+                            name="tempoEntrega" 
+                            min="1" 
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Salvar Configurações</button>
+                </form>
+            </article>
+
+            <article class="config-card" style="background: white; padding: var(--spacing-lg); border-radius: 8px; margin-bottom: var(--spacing-lg); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <header class="config-header">
+                    <h2>Segurança</h2>
+                </header>
+                <form id="configSeguranca" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="requerirVerificacao"> Requer Verificação de Email
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="requerirAprovacao"> Requer Aprovação para Novos Vendedores
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tentativasLogin">Tentativas de Login Máximas</label>
+                        <input 
+                            type="number" 
+                            id="tentativasLogin" 
+                            name="tentativasLogin" 
+                            min="1" 
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Salvar Configurações</button>
+                </form>
+            </article>
+
+            <article class="config-card" style="background: white; padding: var(--spacing-lg); border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <header class="config-header">
+                    <h2>Backup e Manutenção</h2>
+                </header>
+                <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                    <p>Última backup: <strong id="ultimoBackup">Nunca realizado</strong></p>
+                    <button type="button" class="btn btn-secondary" onclick="realizarBackup()">
+                        Realizar Backup Agora
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <footer style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="/admin/dashboard" class="btn btn-secondary">Voltar ao Dashboard</a>
+        </footer>
+    </main>
+
+    <script src="/js/admin-configuracoes.js"></script>
+</body>
+</html>
+

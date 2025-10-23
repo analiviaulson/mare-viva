@@ -5,19 +5,13 @@
         title:'Notícias - Maré Viva',
         description:'Notícias - Maré Viva. Fique por dentro das últimas notícias sobre conservação marinha e sustentabilidade.'
     }) %>
+    <link rel="stylesheet" href="/css/noticias.css">
 </head>
 <body>
     <%- include('../partials/header') %>
 
     <main class="main-content">
-        <section class="section bg-light">
-            <nav class="nav-tabs" aria-label="Navegação principal">
-                <a href="/sobre" class="nav-tab">Sobre</a>
-                <a href="/denuncias" class="nav-tab">Denúncia</a>
-                <a href="/noticias" class="nav-tab active">Notícias</a>
-                <!--<a href="#" class="nav-tab">Ajuda</a> -->
-            </nav>
-        </section>
+        <%- include('../partials/submenu') %>
 
         <section class="section">
             <header class="text-center mb-4">
@@ -98,6 +92,5 @@
     <%- include('../partials/footer') %>
 
     <script src="/js/main.js"></script>
-    <link rel="stylesheet" href="/css/noticias.css">
 </body>
 </html>

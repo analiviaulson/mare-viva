@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('../../partials/head', {
+        title:'Meu Perfil - Vendedor',
+        description:'Edite suas informações pessoais e de contato.'
+    }) %>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <section class="dashboard-header__content">
+            <header>
+                <h1>Meu Perfil</h1>
+            </header>
+            <nav aria-label="Ações do vendedor" style="display: flex; gap: var(--spacing-md);">
+                <a href="/vendedor/dashboard" class="btn btn-secondary">Voltar ao Dashboard</a>
+                <form method="POST" action="/vendedor/logout" style="display: inline;">
+                    <button type="submit" class="btn btn-secondary">Sair</button>
+                </form>
+            </nav>
+        </section>
+    </header>
+
+    <main class="main-content">
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="/vendedor/dashboard">Dashboard</a></li>
+                <li><a href="/vendedor/produtos">Meus Produtos</a></li>
+                <li><a href="/vendedor/pedidos">Meus Pedidos</a></li>
+                <li><a href="/vendedor/perfil" class="active">Meu Perfil</a></li>
+            </ul>
+        </nav>
+
+        <section class="perfil-section" style="max-width: 600px; margin: 0 auto;">
+            <header class="perfil-header">
+                <h2>Informações Pessoais</h2>
+            </header>
+
+            <form id="perfilForm" class="perfil-form" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome" 
+                        value="<%= user.nome %>" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        value="<%= user.email %>" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input 
+                        type="tel" 
+                        id="telefone" 
+                        name="telefone" 
+                        placeholder="(11) 9999-9999"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição da Loja</label>
+                    <textarea 
+                        id="descricao" 
+                        name="descricao" 
+                        rows="4" 
+                        placeholder="Descreva sua loja..."
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Salvar Alterações
+                </button>
+            </form>
+
+            <section class="seguranca-section" style="margin-top: var(--spacing-xl); padding-top: var(--spacing-xl); border-top: 1px solid #ddd;">
+                <header class="seguranca-header">
+                    <h2>Segurança</h2>
+                </header>
+
+                <form id="senhaForm" class="seguranca-form" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                    <div class="form-group">
+                        <label for="senhaAtual">Senha Atual</label>
+                        <input 
+                            type="password" 
+                            id="senhaAtual" 
+                            name="senhaAtual" 
+                            placeholder="Sua senha atual"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="novaSenha">Nova Senha</label>
+                        <input 
+                            type="password" 
+                            id="novaSenha" 
+                            name="novaSenha" 
+                            placeholder="Nova senha"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmaSenha">Confirmar Nova Senha</label>
+                        <input 
+                            type="password" 
+                            id="confirmaSenha" 
+                            name="confirmaSenha" 
+                            placeholder="Confirme a nova senha"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary">
+                        Alterar Senha
+                    </button>
+                </form>
+            </section>
+        </section>
+
+        <footer style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="/vendedor/dashboard" class="btn btn-secondary">Voltar ao Dashboard</a>
+        </footer>
+    </main>
+
+    <script src="/js/vendedor-perfil.js"></script>
+</body>
+</html>
+

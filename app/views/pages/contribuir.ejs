@@ -5,22 +5,13 @@
         title: 'Contribuir - Maré Viva',
         description: 'Contribuir - Maré Viva. Saiba como você pode contribuir para a conservação dos oceanos.'
     }) %>
+    <link rel="stylesheet" href="/css/contribuir.css">
 </head>
 <body>
-   
     <%- include('../partials/header') %>
 
     <main class="main-content">
-    
-        <section class="section bg-light">
-            <nav class="nav-tabs" aria-label="Navegação principal">
-                <a href="/sobre" class="nav-tab">Sobre</a>
-                <a href="/denuncias" class="nav-tab">Denúncia</a>
-                <a href="/noticias" class="nav-tab">Notícias</a>
-                <!--<a href="#" class="nav-tab">Ajuda</a> -->
-            </nav>
-        </section>
-
+        <%- include('../partials/submenu') %>
   
         <section class="section">
             <header class="text-center mb-4">
@@ -132,7 +123,6 @@
 
     <script src="/js/main.js"></script>
     <script src="/js/contribuir.js"></script>
-    <link rel="stylesheet" href="/css/contribuir.css">
 </body>
 </html>
 

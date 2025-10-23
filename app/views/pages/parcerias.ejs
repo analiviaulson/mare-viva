@@ -5,21 +5,13 @@
         title:'Parcerias - Maré Viva',
         description:'Parcerias - Maré Viva. Conheça nossos parceiros na conservação dos oceanos e sustentabilidade marinha.'
     }) %>
+    <link rel="stylesheet" href="/css/parcerias.css">
 </head>
 <body>
     <%- include('../partials/header') %>
 
     <main class="main-content">
-        <section class="section bg-light">
-            <section class="container">
-                <nav class="nav-tabs">
-                    <a href="/sobre" class="nav-tab">Sobre</a>
-                    <a href="/denuncias" class="nav-tab">Denúncia</a>
-                    <a href="/noticias" class="nav-tab">Notícias</a>
-                    <a href="/ajuda" class="nav-tab">Ajuda</a>
-                </nav>
-            </section>
-        </section>
+        <%- include('../partials/submenu') %>
 
         <section class="section">
             <section class="container">
@@ -88,7 +80,5 @@
     <%- include('../partials/footer') %>
 
     <script src="js/main.js"></script>
-
-    <link rel="stylesheet" href="/css/parcerias.css">
 </body>
 </html>

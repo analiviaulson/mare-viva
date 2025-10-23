@@ -5,19 +5,13 @@
         title:'Denúncias - Maré Viva',
         description:'Denúncias - Maré Viva. Reporte problemas ambientais e ajude na conservação dos oceanos.'
     }) %>
+    <link rel="stylesheet" href="/css/denuncias.css">
 </head>
 <body>
     <%- include('../partials/header') %>
 
     <main class="main-content">
-        <section class="section bg-light">
-            <nav class="nav-tabs" aria-label="Navegação principal">
-                <a href="/sobre" class="nav-tab">Sobre</a>
-                <a href="/denuncias" class="nav-tab active">Denúncia</a>
-                <a href="/noticias" class="nav-tab">Notícias</a>
-                <!--<a href="#" class="nav-tab">Ajuda</a> -->
-            </nav>
-        </section>
+        <%- include('../partials/submenu') %>
 
         <section class="section">
             <header class="text-center mb-4">
@@ -97,6 +91,5 @@
 
     <script src="/js/main.js"></script>
     <script src="/js/denuncias.js"></script>
-    <link rel="stylesheet" href="/css/denuncias.css">
 </body>
 </html>

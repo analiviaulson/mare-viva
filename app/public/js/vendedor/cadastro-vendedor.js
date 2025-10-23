@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.disabled = true;
         setTimeout(() => {
           alert('Conta de vendedor criada com sucesso! Você será redirecionado para o login.');
-          window.location.href = 'login-vendedor';
+          window.location.href = '/vendedor/login';
         }, 1500);
       }
     });

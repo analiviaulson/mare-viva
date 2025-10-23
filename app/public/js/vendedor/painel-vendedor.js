@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (!vendedorLogado) {
     alert('Você precisa fazer login como vendedor para acessar esta página.');
-    window.location.href = 'login-vendedor';
+    window.location.href = '/vendedor/login';
     return;
   }
 
@@ -58,7 +58,7 @@ function logout() {
   sessionStorage.removeItem('vendedorLogado');
   sessionStorage.removeItem('vendedorEmail');
   alert('Logout realizado com sucesso!');
-  window.location.href = 'index';
+  window.location.href = '/';
 }
 
 function addProduto() {

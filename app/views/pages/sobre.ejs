@@ -5,6 +5,7 @@
         title:'Sobre Nós - Maré Viva',
         description:'Sobre Nós - Maré Viva. Conheça nossa missão de conservação e sustentabilidade dos oceanos.'
     }) %>
+    <link rel="stylesheet" href="/css/sobre.css">
 </head>
 <body>
     <%- include('../partials/header') %>
@@ -16,7 +17,7 @@
                 <p class="section-hero__subtitle">Conservação e Sustentabilidade dos Oceanos</p>
             </header>
         </section>
-
+        <%- include('../partials/submenu') %>
         <section class="section">
             <article class="foundation-card">
                 <header class="about-card__header">
@@ -94,20 +95,9 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <section>
-            <nav class="footer__social" aria-label="Redes sociais">
-                <a href="#" class="footer__social-link" aria-label="WhatsApp">📱</a>
-                <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
-                <a href="#" class="footer__social-link" aria-label="Google">🌐</a>
-                <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
-            </nav>
-            <p>&copy; 2024 Maré Viva. Todos os direitos reservados.</p>
-        </section>
-    </footer>
+    <%- include('../partials/footer') %>
 
     <script src="js/main.js"></script>
     <script src="/js/sobre.js"></script>
-    <link rel="stylesheet" href="/css/sobre.css">
 </body>
 </html>

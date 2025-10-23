@@ -5,23 +5,14 @@
         title:'Loja - Maré Viva',
         description:'Loja - Maré Viva. Produtos sustentáveis para apoiar a conservação dos oceanos.'
     }) %>
+    <link rel="stylesheet" href="/css/loja-page.css">
 </head>
 
 <body>
     <%- include('../partials/header') %>
 
     <main class="main-content">
-        
-        <section class="section bg-light">
-            <header class="container">
-                <nav class="nav-tabs">
-                    <a href="/sobre" class="nav-tab">Sobre</a>
-                    <a href="/denuncias" class="nav-tab">Denúncia</a>
-                    <a href="/noticias" class="nav-tab">Notícias</a>
-                    <!--<a href="/ajuda" class="nav-tab">Ajuda</a>  -->
-                </nav>
-            </header>
-        </section>
+        <%- include('../partials/submenu') %>
 
         <section class="section">
             <article class="container">
@@ -153,6 +144,6 @@
 
     <script src="/js/main.js"></script>
     <script src="/js/loja.js"></script>
-    <link rel="stylesheet" href="/css/loja-page.css">
+    
 </body>
 </html>
